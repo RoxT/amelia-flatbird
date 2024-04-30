@@ -69,34 +69,47 @@ visible = false
 texture = ExtResource("6_j241i")
 
 [node name="HealthLabel" type="Label" parent="Foe"]
-offset_left = 795.0
-offset_top = 117.0
-offset_right = 915.0
-offset_bottom = 160.0
+offset_left = 688.0
+offset_top = 119.0
+offset_right = 808.0
+offset_bottom = 162.0
 text = "HP: 34"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="HealthBar" type="ProgressBar" parent="Foe"]
-offset_left = 977.0
+offset_left = 915.0
 offset_top = 117.0
-offset_right = 1327.0
+offset_right = 1265.0
 offset_bottom = 160.0
 
 [node name="Label" type="Label" parent="Foe"]
-offset_left = 795.0
+offset_left = 741.0
 offset_top = 55.0
-offset_right = 1049.0
+offset_right = 997.0
 offset_bottom = 100.0
 text = "Wild Pheasant"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Timer" type="Timer" parent="Foe"]
-wait_time = 0.5
+wait_time = 0.8
+one_shot = true
+
+[node name="Statuses" type="HFlowContainer" parent="Foe"]
+offset_left = 1015.0
+offset_top = 55.0
+offset_right = 1286.0
+offset_bottom = 119.0
 
 [node name="Ally" type="Node2D" parent="."]
 script = ExtResource("6_kerbk")
+
+[node name="Statuses" type="HFlowContainer" parent="Ally"]
+offset_left = 1096.0
+offset_top = 592.0
+offset_right = 1367.0
+offset_bottom = 656.0
 
 [node name="HealthBar" type="ProgressBar" parent="Ally"]
 offset_left = 1088.0
@@ -206,6 +219,12 @@ offset_bottom = 736.0
 text = "Feral Pheasant"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Statuses" type="HFlowContainer" parent="Player"]
+offset_left = 592.0
+offset_top = 592.0
+offset_right = 863.0
+offset_bottom = 656.0
 
 [node name="Bag" type="Panel" parent="."]
 visible = false

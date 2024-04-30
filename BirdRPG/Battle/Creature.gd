@@ -1,5 +1,6 @@
 extends CanvasItem
 
+const StatusCoin := preload("res://Battle/status/coin.tscn")
 @onready var health_bar := $HealthBar
 @onready var health_label := $HealthLabel
 @onready var label := $Label
@@ -29,6 +30,9 @@ func my_turn():
 	label.theme_type_variation = "highlight"
 	refresh()
 	$Sprite/RingLight.show()
+	for s in $Statuses.get_children():
+		if await s.count_down() == 5:
+			creature.modifers.erase(s.status_data.title)
 	
 func not_my_turn():
 	label.theme_type_variation = &""
@@ -36,11 +40,19 @@ func not_my_turn():
 	$Sprite/RingLight.hide()
 
 func change_creature(new_creature:Creature):
+	if creature.new_mod.is_connected(add_mod):
+		creature.new_mod.disconnect(add_mod)
 	creature = new_creature
 	label.text = creature.title
 	sprite.texture = creature.load_image()
 	sprite.get_node("RingLight").texture = creature.load_right_light()
+	creature.new_mod.connect(add_mod)
 	refresh()
+	
+func add_mod(status_data:Status):
+	var coin = StatusCoin.instantiate()
+	coin.status_data = status_data
+	$Statuses.add_child(coin)
 
 func refresh():
 	health_bar.value = creature.health

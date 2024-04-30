@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_x0dyq")
-mod = "hit_chance"
+mod = "defence"
 rate = -20
 doer = "Who?"
 hit_chance = 100

@@ -21,12 +21,22 @@ extends Resource
 }
 const TOP_PATH := "res://Battle/"
 const ActionsPath := "res://Battle/Actions/%s.tres"
-var modifers := {}
+@export var modifers := {}:
+	set(value):
+		print(str(value))
+		modifers = value
 
 signal line_item(msg)
+signal new_mod(mod)
 
 func _init():
 	pass
+	
+func mod_rate(mod_type:String)->float:
+	if modifers.has(mod_type):
+		return modifers[mod_type].percent_change
+	else:
+		return 0
 
 func attack_factory(key:="")->AnAction:
 	if key.is_empty():
@@ -48,7 +58,6 @@ func hit(action:AnAction)->bool:
 	
 	action.apply(self)
 
-	line_item.emit(action.history(title))
 	return  health <= 0
 	
 static func path()->String:

@@ -1,0 +1,92 @@
+[gd_scene load_steps=7 format=3 uid="uid://bguu4v8d0xp64"]
+
+[ext_resource type="Texture2D" uid="uid://xjsl07ke34ff" path="res://Battle/status/up_arrow-export.png" id="1_anp8r"]
+[ext_resource type="Script" path="res://Battle/status/coin.gd" id="2_xtc7p"]
+[ext_resource type="Texture2D" uid="uid://ftymar0okl3d" path="res://Battle/status/attack-export.png" id="3_7o31h"]
+
+[sub_resource type="Animation" id="Animation_tsckq"]
+resource_name = "drop"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 11.7127),
+"update": 0,
+"values": [Color(0.964706, 0.886275, 0.478431, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:custom_minimum_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -24)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.9),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_5ir0a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:custom_minimum_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tfxgy"]
+_data = {
+"RESET": SubResource("Animation_5ir0a"),
+"drop": SubResource("Animation_tsckq")
+}
+
+[node name="Arrow" type="TextureRect"]
+texture = ExtResource("1_anp8r")
+script = ExtResource("2_xtc7p")
+
+[node name="Type" type="Sprite2D" parent="."]
+position = Vector2(8, 7)
+texture = ExtResource("3_7o31h")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_tfxgy")
+}

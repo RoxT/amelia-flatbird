@@ -1,8 +1,8 @@
 [gd_scene load_steps=3 format=3 uid="uid://b2ua5vo28t6na"]
 
 [ext_resource type="Script" path="res://bird_rpg.gd" id="1_xd7ba"]
-[ext_resource type="Resource" uid="uid://dij4cjqimdual" path="res://Battle/classes/Pheasant.tres" id="2_14c72"]
+[ext_resource type="Resource" uid="uid://ed6msuwpb2bd" path="res://Battle/classes/Squire.tres" id="2_ndwtt"]
 
 [node name="BirdRPG" type="Node"]
 script = ExtResource("1_xd7ba")
-player_creature = ExtResource("2_14c72")
+player_creature = ExtResource("2_ndwtt")

@@ -8,7 +8,7 @@ func _ready():
 func select():
 	if BR.inventory_has_room(&"berry"):
 		BR.inventory_change(&"berry")
-		BR.recieve.emit("You picked up a berry.")
+		BR.recieve.emit("You picked up a berry. There are plenty left")
 	else:
 		BR.simple_message.emit(BR.inventory.no_room_str)
 

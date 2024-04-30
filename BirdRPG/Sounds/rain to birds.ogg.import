@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dgq1wa4euqm56"
+path="res://.godot/imported/rain to birds.ogg-bce979daac0ae18ea42129121c1362c3.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/rain to birds.ogg"
+dest_files=["res://.godot/imported/rain to birds.ogg-bce979daac0ae18ea42129121c1362c3.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

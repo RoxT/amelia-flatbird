@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://mhwvilrf2a7j"]
+[gd_scene load_steps=14 format=3 uid="uid://mhwvilrf2a7j"]
 
 [ext_resource type="TileSet" uid="uid://cxcb7wfe3ytfh" path="res://WalkingAround/Tiles/walking_around_tilesets.tres" id="1_4t2fm"]
 [ext_resource type="Script" path="res://WalkingAround/Marshlands/LeavesBarrel.gd" id="2_x1h8c"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://WalkingAround/objects/Door.gd" id="8_nyal2"]
 [ext_resource type="PackedScene" uid="uid://bl8yusowwfwvy" path="res://WalkingAround/ANIMATIONS.tscn" id="8_x4826"]
 [ext_resource type="Texture2D" uid="uid://i55mwflfpxo7" path="res://WalkingAround/objects/open_door.png" id="9_ev7tc"]
+[ext_resource type="AudioStream" uid="uid://b0hitcvd5e7eh" path="res://Sounds/drop_sunroom_reverb.ogg" id="11_28xxx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7p12p"]
 radius = 20.0
@@ -71,3 +72,8 @@ texture = ExtResource("9_ev7tc")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
 position = Vector2(0, -8)
 shape = SubResource("RectangleShape2D_tih2e")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_28xxx")
+volume_db = 3.748
+autoplay = true

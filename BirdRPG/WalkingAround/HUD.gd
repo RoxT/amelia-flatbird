@@ -14,6 +14,9 @@ func _unhandled_key_input(event:InputEvent):
 	if event.is_action_pressed("hud"):
 		visible = !visible
 		get_tree().paused = !get_tree().paused
+	if event.is_action_pressed("escape"):
+		get_tree().root.propagate_notification(NOTIFICATION_WM_CLOSE_REQUEST)
+		get_tree().quit()
 		
 func _on_creature_changed():
 	var creature = BR.player_creature

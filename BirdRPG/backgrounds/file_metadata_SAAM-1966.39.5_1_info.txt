@@ -1,0 +1,55 @@
+Smithsonian Institution
+______________________
+Asset Name:
+damsmdm:SAAM-1966.39.5_1
+
+File Usage:
+
+CC0
+This media is in the public domain (free of copyright restrictions). You can copy, modify, and distribute this work without contacting the Smithsonian. For more information, visit the Smithsonian's Terms of Use page at https://www.si.edu/Termsofuse 
+
+
+______________________
+Object details:
+
+Title: Area Broken by Perpendiculars
+Smithsonian Record ID: edanmdm:saam_1966.39.5
+
+	Title
+	Area Broken by Perpendiculars
+
+	Metadata Usage
+	CC0
+
+	Guid
+	http://n2t.net/ark:/65665/vk78174b342-b5c9-4833-96b3-78a94d9eced5
+
+	Data Source
+	Smithsonian American Art Museum
+
+	Artist
+	Joseph Schillinger, born Kharkov, Russia 1895-died New York City 1943
+
+	Medium
+	opaque watercolor
+
+	Dimensions
+	9 x 12 in. (22.9 x 30.5 cm)
+
+	Credit Line
+	Smithsonian American Art Museum, Gift of Mrs. Joseph Schillinger
+
+	Object number
+	1966.39.5
+
+	Date
+	ca. 1934
+
+	Type
+	Painting
+
+	Topic
+	Abstract\geometric
+
+______________________
+

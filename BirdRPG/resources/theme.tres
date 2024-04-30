@@ -1,0 +1,42 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://i7dabhrbrvd2"]
+
+[ext_resource type="StyleBox" uid="uid://cdpjovc3yhv0d" path="res://resources/green_flat_style_box.tres" id="1_qk0ly"]
+[ext_resource type="FontFile" uid="uid://cl73mx7ja5njl" path="res://resources/innkeeper.ttf" id="1_uwih3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5a6b4"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.0470588, 0.0392157, 0.0862745, 0.180392)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.8, 0.8, 0.8, 0.0862745)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mw37x"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1147c"]
+bg_color = Color(0.572549, 0.619608, 0.447059, 1)
+
+[resource]
+default_font = ExtResource("1_uwih3")
+default_font_size = 25
+Button/styles/normal = SubResource("StyleBoxFlat_5a6b4")
+Label/colors/font_color = Color(0.901961, 0.901961, 0.901961, 1)
+Label/constants/line_spacing = 6
+Label/styles/normal = SubResource("StyleBoxEmpty_mw37x")
+Panel/styles/panel = ExtResource("1_qk0ly")
+highlight/base_type = &"Label"
+highlight/colors/font_color = Color(0, 0, 0, 1)
+highlight/styles/normal = SubResource("StyleBoxFlat_1147c")

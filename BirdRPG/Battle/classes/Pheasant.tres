@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="Player" load_steps=2 format=3 uid="uid://dij4cjqimdual"]
+
+[ext_resource type="Script" path="res://Battle/classes/PlayerR.gd" id="1_13i5h"]
+
+[resource]
+script = ExtResource("1_13i5h")
+health = 30
+max_health = 30
+base_attack = 3
+base_defence = 10
+base_speed = 60
+base_hit_chance = 100
+base_evasion = 10
+title = "Pheasant"
+image = "bird"
+attacks = {
+"kick": {
+"amt": 10,
+"hit_chance": 70
+},
+"peck": {
+"amt": 7,
+"hit_chance": 90
+},
+"scratch": {
+"amt": 5,
+"hit_chance": 100
+}
+}
+effects = {
+"spook": {
+"mod": "hit_chance",
+"rate": -50
+}
+}

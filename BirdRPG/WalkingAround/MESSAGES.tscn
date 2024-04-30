@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://bs25n5uc44unx"]
+
+[ext_resource type="Script" path="res://WalkingAround/Messages.gd" id="1_lgjwf"]
+
+[node name="Messages" type="CanvasLayer"]
+process_mode = 2
+visible = false
+script = ExtResource("1_lgjwf")
+
+[node name="Messages" type="Panel" parent="."]
+process_mode = 2
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 29.0
+offset_top = -254.0
+offset_right = -26.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 62.0
+offset_top = 858.0
+offset_right = -66.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 2
+autowrap_mode = 2
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true

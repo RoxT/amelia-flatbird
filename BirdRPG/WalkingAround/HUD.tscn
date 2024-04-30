@@ -1,0 +1,80 @@
+[gd_scene load_steps=3 format=3 uid="uid://cv18dlnakh3qx"]
+
+[ext_resource type="Script" path="res://WalkingAround/HUD.gd" id="1_dajmv"]
+[ext_resource type="Texture2D" uid="uid://rd0l470d0khb" path="res://backgrounds/inventory.jpg" id="2_hwr57"]
+
+[node name="HUD" type="CanvasLayer"]
+process_mode = 3
+visible = false
+script = ExtResource("1_dajmv")
+
+[node name="Bag" type="Panel" parent="."]
+offset_left = 29.0
+offset_top = 48.0
+offset_right = 261.0
+offset_bottom = 330.0
+
+[node name="Inventory" type="Sprite2D" parent="Bag"]
+show_behind_parent = true
+position = Vector2(276, 341)
+texture = ExtResource("2_hwr57")
+
+[node name="Label" type="Label" parent="Bag"]
+layout_mode = 1
+offset_right = 79.0
+offset_bottom = 42.0
+text = "BAG"
+
+[node name="EmptyLabel" type="Label" parent="Bag"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 42.0
+offset_right = 227.0
+offset_bottom = 275.0
+text = "Empty"
+autowrap_mode = 2
+
+[node name="List" type="VFlowContainer" parent="Bag"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 48.0
+offset_right = -5.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Health" type="Panel" parent="."]
+offset_left = 305.0
+offset_top = 48.0
+offset_right = 519.0
+offset_bottom = 96.0
+
+[node name="Label" type="Label" parent="Health"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -21.0
+offset_right = 177.0
+offset_bottom = 21.0
+grow_vertical = 2
+text = "Health: 10"
+
+[node name="Bar" type="ProgressBar" parent="Health"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -214.0
+offset_top = 43.0
+offset_right = 34.0
+offset_bottom = 85.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]

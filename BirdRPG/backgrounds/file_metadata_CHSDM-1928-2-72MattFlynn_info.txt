@@ -1,0 +1,61 @@
+Smithsonian Institution
+______________________
+Asset Name:
+damsmdm:CHSDM-1928-2-72MattFlynn
+
+File Usage:
+
+CC0
+This media is in the public domain (free of copyright restrictions). You can copy, modify, and distribute this work without contacting the Smithsonian. For more information, visit the Smithsonian's Terms of Use page at https://www.si.edu/Termsofuse 
+
+
+______________________
+Object details:
+
+Title: Sidewall
+Smithsonian Record ID: edanmdm:chndm_1928-2-72
+
+	Title
+	Sidewall
+
+	Metadata Usage
+	CC0
+
+	Guid
+	http://n2t.net/ark:/65665/kq415328ff6-8db6-48ce-bcb1-61837a683f05
+
+	Data Source
+	Cooper Hewitt, Smithsonian Design Museum
+
+	Medium
+	Block-printed on handmade paper
+
+	Dimensions
+	55.5 x 37.5 cm (21 7/8 x 14 3/4 in.)
+
+	Catalogue Status
+	Research in Progress
+
+	Description
+	Vertical rectangle. Staggered repeat of large whorls of foliage, or wreath, with pink leaf-forms at center.
+
+	Made in
+	France
+
+	Credit Line
+	Gift of Eleanor and Sarah Hewitt
+
+	Accession Number
+	1928-2-72
+
+	Date
+	1820–30
+
+	Type
+	Wallcoverings
+
+	Type
+	Sidewall
+
+______________________
+

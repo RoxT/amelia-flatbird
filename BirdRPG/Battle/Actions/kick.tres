@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="AnAttack" load_steps=2 format=3 uid="uid://o1xnkfy7w41l"]
+
+[ext_resource type="Script" path="res://Battle/Actions/AnAttackR.gd" id="1_h1urg"]
+
+[resource]
+script = ExtResource("1_h1urg")
+amt = 7
+doer = "Who?"
+hit_chance = 80

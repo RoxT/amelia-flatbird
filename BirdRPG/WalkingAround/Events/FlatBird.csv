@@ -1,0 +1,11 @@
+,en
+MEETING1,"???: I've been watching you. Killing small vermin is a pretty good start."
+MEETING2,"Amelia: I'm going to fight you too!"
+MEETING3,"???: As you wish. Not much combat experience to be had in your pen at the House. I am called Flat Bird. I'm a KNIGHT. I've fought on every front; the beach, the marshlands, the town, and everywhere in between. I can show you how to survive here in the forest, if you want to be my SQUIRE."
+AFTER1,"Amelia: Okay, you're pretty strong. Why do you want a SQUIRE? Someone to carry your stuff around?"
+AFTER2,"Flat Bird: Much more than that. A good SQUIRE is cultured. Your performances and courtly manners can be used in and out of battle to off-balance your foes. Even with your rebellious temperment I can see you learned a lot from the ladies of the House. I'll teach you to be deadly and you teach me your skills. They're rare out here and it'll help us get ahead in the knightly world."
+AFTER3,"Amelia: Huh?"
+AFTER4,"Flat Bird: Let's head out, you'll see. And here's my pack."
+RECIEVE1,"You recieve a pack."
+RECIEVE2,"Flat Bird, a KNIGHT, has joined your party for battle."
+RECIEVE3,"You learned the class of SQUIRE."

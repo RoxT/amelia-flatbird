@@ -1,0 +1,55 @@
+[
+	{
+		"title": "Squire",
+		"image": "bird",
+		"health" : 10,
+		"max_health" : 10,
+		"base_attack" : 3,
+		"base_defence" : 20,
+		"base_speed" : 60,
+		"base_hit_chance" : 100,
+		"base_evasion" : 0,
+		"attacks": {
+			"peck": "peck"
+		},
+		"effects": {
+			"spook": "spook",
+			"sing": "sing"
+		}
+	},
+	{
+		"title": "Pheasant",
+		"image": "bird",
+		"health" : 10,
+		"max_health" : 10,
+		"base_attack" : 3,
+		"base_defence" : 10,
+		"base_speed" : 60,
+		"base_hit_chance" : 100,
+		"base_evasion" : 10,
+		"attacks": {
+			"peck": "peck",
+			"scratch": "scratch",
+			"kick": "kick"
+		}
+	},
+	{
+		"title": "Knight",
+		"image": "flat_bird",
+		"health" : 10,
+		"max_health" : 10,
+		"base_attack" : 3,
+		"base_defence" : 30,
+		"base_speed" : 60,
+		"base_hit_chance" : 100,
+		"base_evasion" : 0,
+		"attacks": {
+			"peck": "peck",
+			"kick": "kick"
+		},
+		"effects": {
+			"spook": "spook",
+			"sing": "sing"
+		}
+	}
+]

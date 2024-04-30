@@ -1,0 +1,79 @@
+Smithsonian Institution
+______________________
+Asset Name:
+damsmdm:CHSDM-1970-1-15-aMattFlynn
+
+File Usage:
+
+Not determined
+There are restrictions for re-using this media. For more information, visit the Smithsonian's Terms of Use page at https://www.si.edu/Termsofuse
+
+
+______________________
+Object details:
+
+Title: Vine
+Smithsonian Record ID: edanmdm:chndm_1970-1-15-a_d
+
+	Title
+	Vine
+
+	Metadata Usage
+	Not determined
+
+	Guid
+	http://n2t.net/ark:/65665/kq4b750914a-4972-4693-aebb-36a5a003f1cc
+
+	Data Source
+	Cooper Hewitt, Smithsonian Design Museum
+
+	Designer
+	William Morris, (British, 1834–1896)
+
+	Manufacturer
+	Arthur Sanderson & Sons, Ltd., (London, founded 1860)
+
+	Medium
+	Block-printed paper
+
+	Dimensions
+	H x W x D (a): 92.5 x 56.5 cm (36 7/16 x 22 1/4 in.)
+
+	Dimensions
+	Repeat H x W (a): 53.3 x 53.3 cm (21 x 21 in.)
+
+	Dimensions
+	L x W x D (b): 91.2 x 55.5 cm (35 7/8 x 21 7/8 in.)
+
+	Dimensions
+	L x W x D (c): 91.7 x 55.4 cm (36 1/8 x 21 13/16 in.)
+
+	Dimensions
+	L x W x D (d): 56 x 91.4 cm (22 1/16 x 36 in.)
+
+	Description
+	a) "Vine" printed in blues, lavenders and greens. Printed from nine woodblocks; b) "The Wreath" printed in tan, two shades of blue and green. Floral design for ceiling; d) "Net Ceiling" printed in two shades of gray-blue, gray-chartreuse. Flat flower and leaf forms springing from central quatrefoil.
+
+	Made in
+	London, England
+
+	Credit Line
+	Gift of Arthur Sanderson & Sons, Ltd.
+
+	Accession Number
+	1970-1-15-a/d
+
+	Date
+	1873
+
+	Type
+	Wallcoverings
+
+	Object Name
+	Sidewall
+
+	Type
+	Sidewall
+
+______________________
+

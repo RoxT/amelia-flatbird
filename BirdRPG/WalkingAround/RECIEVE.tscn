@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://pvg3uais304c"]
+
+[ext_resource type="Script" path="res://WalkingAround/Recieve.gd" id="1_8kgqf"]
+
+[node name="Recieve" type="CanvasLayer"]
+process_mode = 2
+visible = false
+script = ExtResource("1_8kgqf")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 305.0
+offset_top = -59.0
+offset_right = -247.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 37.0
+offset_top = -21.0
+offset_right = -43.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "You gain a new class: KNIGHT"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

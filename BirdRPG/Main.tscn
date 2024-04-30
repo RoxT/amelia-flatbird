@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=3 uid="uid://d2lp4b0meuk1e"]
+
+[ext_resource type="Texture2D" uid="uid://dvu2pgwbi64e7" path="res://backgrounds/SAAM-1929.6.37_1_screen.jpg" id="1_aydqd"]
+[ext_resource type="Texture2D" uid="uid://dyliro3y0jovs" path="res://backgrounds/SAAM-1966.39.5_1_screen.jpg" id="2_7yuyv"]
+[ext_resource type="Texture2D" uid="uid://fvojukeod3gs" path="res://backgrounds/CHSDM-1970-1-15-aMattFlynn_screen.jpg" id="3_s7p5m"]
+[ext_resource type="Texture2D" uid="uid://xi7sbyg3gck2" path="res://backgrounds/CHSDM-1971-58-12MattFlynn_screen.jpg" id="4_k1cy1"]
+[ext_resource type="Texture2D" uid="uid://bvijlk4yxjhbt" path="res://backgrounds/CHSDM-1928-2-72MattFlynn_screen.jpg" id="5_euywm"]
+[ext_resource type="Texture2D" uid="uid://bd51iqi8uyrja" path="res://creatures/FS-5814_07_screen.jpg" id="6_jx7gi"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Saam-1929_6_371Screen" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_aydqd")
+expand_mode = 3
+
+[node name="Saam-1966_39_51Screen" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 699.0
+offset_top = 631.0
+offset_right = 1898.0
+offset_bottom = 1467.0
+texture = ExtResource("2_7yuyv")
+
+[node name="Chsdm-1970-1-15-aMattFlynnScreen" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -457.0
+offset_top = -45.0
+offset_right = 320.0
+offset_bottom = 1155.0
+texture = ExtResource("3_s7p5m")
+
+[node name="Chsdm-1971-58-12MattFlynnScreen" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1776.0
+offset_top = -137.0
+offset_right = 2754.0
+offset_bottom = 1063.0
+texture = ExtResource("4_k1cy1")
+
+[node name="Chsdm-1928-2-72MattFlynnScreen" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -64.0
+offset_top = 706.0
+offset_right = 764.0
+offset_bottom = 1905.0
+texture = ExtResource("5_euywm")
+
+[node name="Fs-581407Screen" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1887.0
+offset_top = 793.0
+offset_right = 3087.0
+offset_bottom = 1708.0
+texture = ExtResource("6_jx7gi")

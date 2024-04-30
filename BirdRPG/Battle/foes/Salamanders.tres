@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Foe" load_steps=2 format=3 uid="uid://it0i4x1qh1fi"]
+
+[ext_resource type="Script" path="res://Battle/foes/FoeR.gd" id="1_p655u"]
+
+[resource]
+script = ExtResource("1_p655u")
+health = 20
+max_health = 20
+base_attack = 3
+base_defence = 10
+base_speed = 60
+base_hit_chance = 100
+base_evasion = 5
+title = "Salamanders"
+image = "salamanders.jpg"
+attacks = {
+"peck": &"peck",
+"scratch": &"scratch"
+}
+effects = {
+"spook": &"spook"
+}

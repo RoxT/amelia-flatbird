@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cw1rgjn83a50e"]
+
+[ext_resource type="Script" path="res://ImportJSON.gd" id="1_nkq5x"]
+
+[node name="ImportJson" type="Node2D"]
+script = ExtResource("1_nkq5x")

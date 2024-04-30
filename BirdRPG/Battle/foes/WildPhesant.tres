@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Foe" load_steps=2 format=3 uid="uid://cv12lmk4t2tbk"]
+
+[ext_resource type="Script" path="res://Battle/foes/FoeR.gd" id="1_uh3ix"]
+
+[resource]
+script = ExtResource("1_uh3ix")
+health = 30
+max_health = 30
+base_attack = 1
+base_defence = 10
+base_speed = 60
+base_hit_chance = 100
+base_evasion = 0
+title = "Wild Pheasant"
+image = "flat_bird.png"
+attacks = {
+"peck": &"peck",
+"scratch": &"scratch"
+}
+effects = {
+"spook": &"spook"
+}

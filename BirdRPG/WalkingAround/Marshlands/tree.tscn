@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://qq5i815uqjck"]
+
+[ext_resource type="Texture2D" uid="uid://drpunh0mby5wv" path="res://WalkingAround/Marshlands/mangrove_2.png" id="1_xsa4j"]
+
+[node name="Tree" type="StaticBody2D"]
+position = Vector2(2964, 1801)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, 0.00012207)
+polygon = PackedVector2Array(-28, 42, -12, 49, 10, 48, 25, 41, 7, 22, 35, 4, 40, -20, 15, -43, -10, -41, -35, -20, -26, 0, -7, 14, -8, 28)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 2)
+scale = Vector2(3, 3)
+texture = ExtResource("1_xsa4j")

@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Player" load_steps=2 format=3 uid="uid://ed6msuwpb2bd"]
+
+[ext_resource type="Script" path="res://Battle/classes/PlayerR.gd" id="1_lpqoq"]
+
+[resource]
+script = ExtResource("1_lpqoq")
+health = 10
+max_health = 10
+base_attack = 3
+base_defence = 20
+base_speed = 60
+base_hit_chance = 100
+base_evasion = 0
+title = "Squire"
+image = "bird"
+attacks = {
+"peck": {
+"amt": 9,
+"hit_chance": 90
+}
+}
+effects = {
+"sing": {
+"mod": "defence",
+"rate": -50
+},
+"spook": {
+"mod": "hit_chance",
+"rate": -50
+}
+}

@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://q2xupjmg8ot3"]
+
+[ext_resource type="Script" path="res://WalkingAround/creatures/MouseArea.gd" id="1_vau1x"]
+[ext_resource type="Texture2D" uid="uid://cm5ewe8hcf725" path="res://WalkingAround/creatures/mouse.png" id="2_uuho3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gm1m5"]
+atlas = ExtResource("2_uuho3")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vj560"]
+atlas = ExtResource("2_uuho3")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ecomf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gm1m5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vj560")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4j252"]
+radius = 84.0
+
+[node name="MouseArea" type="Area2D"]
+position = Vector2(830, 826)
+script = ExtResource("1_vau1x")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ecomf")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_4j252")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.078
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://bhimvw5usbh0v"
+
+[deps]
+
+files=["res://WalkingAround/Events/FlatBird.en.translation"]
+
+source_file="res://WalkingAround/Events/FlatBird.csv"
+dest_files=["res://WalkingAround/Events/FlatBird.en.translation"]
+
+[params]
+
+compress=true
+delimiter=0

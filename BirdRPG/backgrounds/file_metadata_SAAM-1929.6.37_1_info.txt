@@ -1,0 +1,64 @@
+Smithsonian Institution
+______________________
+Asset Name:
+damsmdm:SAAM-1929.6.37_1
+
+File Usage:
+
+CC0
+This media is in the public domain (free of copyright restrictions). You can copy, modify, and distribute this work without contacting the Smithsonian. For more information, visit the Smithsonian's Terms of Use page at https://www.si.edu/Termsofuse 
+
+
+______________________
+Object details:
+
+Title: In the Garden
+Smithsonian Record ID: edanmdm:saam_1929.6.37
+
+	Title
+	In the Garden
+
+	Metadata Usage
+	CC0
+
+	Guid
+	http://n2t.net/ark:/65665/vk77be9a1d7-7965-44f6-8ed1-4ed5a5480443
+
+	Data Source
+	Smithsonian American Art Museum
+
+	Artist
+	Thomas Wilmer Dewing, born Boston, MA 1851-died New York City 1938
+
+	Medium
+	oil on canvas
+
+	Dimensions
+	20 5/8 x 35 in. (52.3 x 88.9 cm.)
+
+	Credit Line
+	Smithsonian American Art Museum, Gift of John Gellatly
+
+	Object number
+	1929.6.37
+
+	Date
+	1892-1894
+
+	Type
+	Painting
+
+	Topic
+	Landscape\celestial\moon
+
+	Topic
+	Landscape\time\night
+
+	Topic
+	Figure group\female
+
+	Topic
+	Landscape\season\spring
+
+______________________
+

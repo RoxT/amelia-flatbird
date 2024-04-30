@@ -1,0 +1,227 @@
+[gd_scene load_steps=13 format=3 uid="uid://c1qqhv44ruqcg"]
+
+[ext_resource type="Script" path="res://Battle/battle.gd" id="1_1o26n"]
+[ext_resource type="Script" path="res://Battle/ActionPanel.gd" id="2_b6uhu"]
+[ext_resource type="Script" path="res://Battle/foes/Foe.gd" id="2_inowl"]
+[ext_resource type="Texture2D" uid="uid://dw5x845qxfbwo" path="res://Battle/classes/bird.png" id="2_tyggp"]
+[ext_resource type="Texture2D" uid="uid://cpdrgsuxwybw7" path="res://Battle/classes/flat_bird.png" id="3_q2ylu"]
+[ext_resource type="Resource" uid="uid://it0i4x1qh1fi" path="res://Battle/foes/Salamanders.tres" id="4_mj703"]
+[ext_resource type="Texture2D" uid="uid://lsm5pvkx5j0u" path="res://Battle/foes/salamanders.jpg" id="5_3386g"]
+[ext_resource type="Texture2D" uid="uid://dbplj6dmfdkbo" path="res://Battle/classes/flat_bird_.png" id="6_j241i"]
+[ext_resource type="Script" path="res://Battle/classes/Player.gd" id="6_kerbk"]
+[ext_resource type="Texture2D" uid="uid://dw7qv0v20dnto" path="res://Battle/classes/bird_.png" id="11_a4poq"]
+[ext_resource type="Script" path="res://Battle/Bag.gd" id="12_hfl61"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gwmsd"]
+bg_color = Color(0.168627, 0.156863, 0.254902, 0.388235)
+expand_margin_left = 14.0
+expand_margin_top = 14.0
+expand_margin_right = 14.0
+expand_margin_bottom = 14.0
+
+[node name="Battle" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1o26n")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="ActionPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 588.0
+offset_top = 670.0
+offset_right = 1839.0
+offset_bottom = 1047.0
+script = ExtResource("2_b6uhu")
+
+[node name="History" type="RichTextLabel" parent="ActionPanel"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 216.0
+offset_right = 839.0
+offset_bottom = 359.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_gwmsd")
+text = "History"
+
+[node name="Bag" type="Button" parent="ActionPanel"]
+layout_mode = 0
+offset_left = 877.0
+offset_top = 282.0
+offset_right = 1197.0
+offset_bottom = 359.0
+text = "Bag"
+
+[node name="Foe" type="Node2D" parent="."]
+script = ExtResource("2_inowl")
+creature = ExtResource("4_mj703")
+
+[node name="Sprite" type="Sprite2D" parent="Foe"]
+position = Vector2(1597, 276)
+texture = ExtResource("5_3386g")
+
+[node name="RingLight" type="Sprite2D" parent="Foe/Sprite"]
+visible = false
+texture = ExtResource("6_j241i")
+
+[node name="HealthLabel" type="Label" parent="Foe"]
+offset_left = 795.0
+offset_top = 117.0
+offset_right = 915.0
+offset_bottom = 160.0
+text = "HP: 34"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HealthBar" type="ProgressBar" parent="Foe"]
+offset_left = 977.0
+offset_top = 117.0
+offset_right = 1327.0
+offset_bottom = 160.0
+
+[node name="Label" type="Label" parent="Foe"]
+offset_left = 795.0
+offset_top = 55.0
+offset_right = 1049.0
+offset_bottom = 100.0
+text = "Wild Pheasant"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="Foe"]
+wait_time = 0.5
+
+[node name="Ally" type="Node2D" parent="."]
+script = ExtResource("6_kerbk")
+
+[node name="HealthBar" type="ProgressBar" parent="Ally"]
+offset_left = 1088.0
+offset_top = 759.0
+offset_right = 1438.0
+offset_bottom = 802.0
+
+[node name="HealthLabel" type="Label" parent="Ally"]
+offset_left = 895.0
+offset_top = 759.0
+offset_right = 1015.0
+offset_bottom = 802.0
+text = "HP: 34"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite" type="Sprite2D" parent="Ally"]
+position = Vector2(345, 808)
+texture = ExtResource("3_q2ylu")
+
+[node name="RingLight" type="Sprite2D" parent="Ally/Sprite"]
+visible = false
+texture = ExtResource("6_j241i")
+
+[node name="Peck" type="Button" parent="Ally"]
+offset_left = 1463.0
+offset_top = 686.0
+offset_right = 1783.0
+offset_bottom = 761.0
+text = "Peck"
+
+[node name="Claw" type="Button" parent="Ally"]
+offset_left = 1465.0
+offset_top = 776.0
+offset_right = 1785.0
+offset_bottom = 851.0
+text = "Claw"
+
+[node name="Spook" type="Button" parent="Ally"]
+offset_left = 1465.0
+offset_top = 864.0
+offset_right = 1785.0
+offset_bottom = 939.0
+text = "Spook"
+
+[node name="Label" type="Label" parent="Ally"]
+offset_left = 618.0
+offset_top = 759.0
+offset_right = 890.0
+offset_bottom = 801.0
+text = "Feral Pheasant"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player" type="Node2D" parent="."]
+script = ExtResource("6_kerbk")
+
+[node name="Peck" type="Button" parent="Player"]
+offset_left = 1463.0
+offset_top = 686.0
+offset_right = 1783.0
+offset_bottom = 761.0
+text = "Peck"
+
+[node name="Claw" type="Button" parent="Player"]
+offset_left = 1465.0
+offset_top = 776.0
+offset_right = 1785.0
+offset_bottom = 851.0
+text = "Claw"
+
+[node name="Spook" type="Button" parent="Player"]
+offset_left = 1465.0
+offset_top = 864.0
+offset_right = 1785.0
+offset_bottom = 939.0
+text = "Spook"
+
+[node name="HealthBar" type="ProgressBar" parent="Player"]
+offset_left = 1088.0
+offset_top = 694.0
+offset_right = 1438.0
+offset_bottom = 737.0
+
+[node name="HealthLabel" type="Label" parent="Player"]
+offset_left = 895.0
+offset_top = 694.0
+offset_right = 1015.0
+offset_bottom = 737.0
+text = "HP: 34"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite" type="Sprite2D" parent="Player"]
+position = Vector2(227, 710)
+texture = ExtResource("2_tyggp")
+
+[node name="RingLight" type="Sprite2D" parent="Player/Sprite"]
+visible = false
+texture = ExtResource("11_a4poq")
+
+[node name="Label" type="Label" parent="Player"]
+offset_left = 618.0
+offset_top = 694.0
+offset_right = 890.0
+offset_bottom = 736.0
+text = "Feral Pheasant"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bag" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 1042.0
+offset_top = 670.0
+offset_right = 1839.0
+offset_bottom = 1047.0
+script = ExtResource("12_hfl61")
+
+[node name="FlowContainer" type="VFlowContainer" parent="Bag"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 16.0
+offset_right = 769.0
+offset_bottom = 359.0
+
+[connection signal="pressed" from="ActionPanel/Bag" to="." method="_on_bag_pressed"]
+[connection signal="visibility_changed" from="Bag" to="Bag" method="_on_visibility_changed"]

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Pack" load_steps=2 format=3 uid="uid://d2lmyhx22q75g"]
+
+[ext_resource type="Script" path="res://Inventory/PackR.gd" id="1_0kcot"]
+
+[resource]
+script = ExtResource("1_0kcot")
+stuff = {}
+max_stack = 3
+title = "Under Wing"
+empty_str = "You've got nothing on you."
+no_room_str = "There's no more room on your person."

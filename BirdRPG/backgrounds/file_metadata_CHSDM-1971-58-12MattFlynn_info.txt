@@ -1,0 +1,64 @@
+Smithsonian Institution
+______________________
+Asset Name:
+damsmdm:CHSDM-1971-58-12MattFlynn
+
+File Usage:
+
+CC0
+This media is in the public domain (free of copyright restrictions). You can copy, modify, and distribute this work without contacting the Smithsonian. For more information, visit the Smithsonian's Terms of Use page at https://www.si.edu/Termsofuse 
+
+
+______________________
+Object details:
+
+Title: Sidewall
+Smithsonian Record ID: edanmdm:chndm_1971-58-12
+
+	Title
+	Sidewall
+
+	Metadata Usage
+	CC0
+
+	Guid
+	http://n2t.net/ark:/65665/kq422459c59-a15d-4d53-8b0c-207db05f06b0
+
+	Data Source
+	Cooper Hewitt, Smithsonian Design Museum
+
+	Maker
+	M.H. Birge & Sons Co., 1834
+
+	Medium
+	Machine-printed
+
+	Dimensions
+	61 x 50 cm (24 x 19 11/16 in.)
+
+	Catalogue Status
+	Research in Progress
+
+	Description
+	On grayed-turquoise ground, naturalistic daisies with foliage in three shades of green, overprinted with black pin-stripes.
+
+	Made in
+	Buffalo, New York, USA
+
+	Credit Line
+	Gift of Philadelphia Museum of Art
+
+	Accession Number
+	1971-58-12
+
+	Date
+	1890–1920
+
+	Type
+	Wallcoverings
+
+	Type
+	Sidewall
+
+______________________
+

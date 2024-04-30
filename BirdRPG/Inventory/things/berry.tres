@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://cvs5x2vnpjm0c"]
+
+[ext_resource type="Script" path="res://Inventory/things/Item.gd" id="1_wmm3g"]
+
+[resource]
+script = ExtResource("1_wmm3g")
+display_name = "berry"
+amount = 0
+use_anytime = {
+"amt": 5,
+"mod": &"health"
+}
+use_battle = {
+"amt": 5,
+"mod": &"health"
+}

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Pack" load_steps=2 format=3 uid="uid://dfnns7a0cuurl"]
+
+[ext_resource type="Script" path="res://Inventory/PackR.gd" id="1_0mulv"]
+
+[resource]
+script = ExtResource("1_0mulv")
+stuff = {}
+max_stack = 10
+title = "Pack"
+empty_str = "There's nothing in the pack."
+no_room_str = "There no more room in here."

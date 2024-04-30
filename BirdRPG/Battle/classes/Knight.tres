@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="Player" load_steps=2 format=3 uid="uid://cl406mecbvkcv"]
+
+[ext_resource type="Script" path="res://Battle/classes/PlayerR.gd" id="1_7wn53"]
+
+[resource]
+script = ExtResource("1_7wn53")
+health = 10
+max_health = 10
+base_attack = 3
+base_defence = 30
+base_speed = 60
+base_hit_chance = 100
+base_evasion = 0
+title = "Knight"
+image = "flat_bird"
+attacks = {
+"kick": {
+"amt": 10,
+"hit_chance": 70
+},
+"peck": {
+"amt": 9,
+"hit_chance": 90
+}
+}
+effects = {
+"sing": {
+"mod": "defence",
+"rate": -50
+},
+"spook": {
+"mod": "hit_chance",
+"rate": -50
+}
+}

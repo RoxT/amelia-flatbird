@@ -31,8 +31,13 @@ func _physics_process(_delta):
 func _unhandled_key_input(event:InputEvent):
 	if event.is_action_pressed("select"):
 		var objects:Array = $ObjectSeeker.get_overlapping_bodies()
-		if objects.size() > 0:
+		var closest
+		for o in objects:
+			if o.has_method("select") and (closest == null 
+			or o.position.distance_squared_to(position) < closest.position.distance_squared_to(position)):
+				closest = o
+		if closest != null:
 			get_viewport().set_input_as_handled()
-			objects[0].select()
+			closest.select()
 			
 

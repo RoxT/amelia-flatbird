@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://1iap152msmm4"]
+
+[ext_resource type="Script" path="res://WalkingAround/MultilineMessage.gd" id="1_m1ds1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lcwnv"]
+radius = 32.0
+
+[node name="OldFrog" type="StaticBody2D"]
+position = Vector2(3160, 1784)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_m1ds1")
+messages = Array[String](["Guard: Flat bird the knight! I'm so glad you're here", "Flat Bird: Amelia, you can use your skills to stop the Trolls. They each only have one strength, high hit or high defence. If you use your dances against the right skill, it will make them far less dangerous."])
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_lcwnv")

@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://citr7hpyxlrea"]
+
+[ext_resource type="Script" path="res://WalkingAround/HUD/an_action_leaf.gd" id="1_1cj6n"]
+
+[node name="ActionLeaf" type="Panel"]
+offset_left = 21.0
+offset_top = 598.0
+offset_right = 502.0
+offset_bottom = 734.0
+script = ExtResource("1_1cj6n")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 2
+offset_right = 481.0
+offset_bottom = 42.0
+text = "Sing"
+
+[node name="Label1" type="Label" parent="."]
+layout_mode = 2
+offset_top = 42.0
+offset_right = 481.0
+offset_bottom = 84.0
+text = "Mod: Attack"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 2
+offset_top = 84.0
+offset_right = 481.0
+offset_bottom = 126.0
+text = "Rate: -40"

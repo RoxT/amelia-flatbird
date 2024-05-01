@@ -4,8 +4,8 @@
 
 [resource]
 script = ExtResource("1_13i5h")
-health = 30
-max_health = 30
+health = 10
+max_health = 10
 base_attack = 3
 base_defence = 10
 base_speed = 60
@@ -14,22 +14,9 @@ base_evasion = 10
 title = "Pheasant"
 image = "bird"
 attacks = {
-"kick": {
-"amt": 10,
-"hit_chance": 70
-},
-"peck": {
-"amt": 7,
-"hit_chance": 90
-},
-"scratch": {
-"amt": 5,
-"hit_chance": 100
+"kick": "kick",
+"peck": "peck",
+"scratch": "scratch"
 }
-}
-effects = {
-"spook": {
-"mod": "hit_chance",
-"rate": -50
-}
-}
+effects = {}
+modifers = {}

@@ -12,7 +12,7 @@ func _ready():
 		$Thing1.text = "Target: %s" % action.mod
 		$Thing2.text = "Amount: %s" % action.rate
 	elif action is AnAttack:
-		$Thing1.text = "Power: %s" % action.amt
+		$Thing1.text = "Power: %s" % action.power
 		$Thing2.text = "Hit Chance: %s" % action.hit_chance 
 	else:
 		assert(false)

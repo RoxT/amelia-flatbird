@@ -13,16 +13,12 @@ func _ready():
 func _unhandled_key_input(event:InputEvent):
 	if event.is_action_pressed("hud"):
 		visible = !visible
+		$PlayerLeaf.leaf(BR.player_creature)
+		$AllyLeaf.leaf(BR.ally_creature)
 		get_tree().paused = !get_tree().paused
 	if event.is_action_pressed("escape"):
 		get_tree().root.propagate_notification(NOTIFICATION_WM_CLOSE_REQUEST)
 		get_tree().quit()
-		
-func _on_creature_changed():
-	var creature = BR.player_creature
-	$Health/Bar.max_value = creature.max_health
-	$Health/Bar.value = creature.health
-	$Health/Label.text = "Health: %s" % creature.health
 
 func _on_inventory_changed():
 	for btn in list.get_children():
@@ -50,8 +46,6 @@ func _on_visibility_changed():
 			$Bag/EmptyLabel.show()
 		else:
 			$Bag/EmptyLabel.hide()
-	_on_creature_changed.call_deferred()
-
 
 func _on_save_pressed():
 	BR.save_state()

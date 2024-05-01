@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_h1urg")
-amt = 7
+power = 4
 doer = "Who?"
 hit_chance = 80

@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_ssfxr")
-amt = 9
+power = 3
 doer = "Who?"
 hit_chance = 90

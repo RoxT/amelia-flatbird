@@ -1,9 +1,9 @@
-[gd_resource type="Resource" script_class="Player" load_steps=2 format=3 uid="uid://cl406mecbvkcv"]
+[gd_resource type="Resource" script_class="Player" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://Battle/classes/PlayerR.gd" id="1_7wn53"]
+[ext_resource type="Script" path="res://Battle/classes/PlayerR.gd" id="1_rc1s5"]
 
 [resource]
-script = ExtResource("1_7wn53")
+script = ExtResource("1_rc1s5")
 health = 10
 max_health = 10
 base_attack = 3
@@ -14,22 +14,10 @@ base_evasion = 0
 title = "Knight"
 image = "flat_bird"
 attacks = {
-"kick": {
-"amt": 10,
-"hit_chance": 70
-},
-"peck": {
-"amt": 9,
-"hit_chance": 90
-}
+"kick": "kick",
+"peck": "peck"
 }
 effects = {
-"sing": {
-"mod": "defence",
-"rate": -50
-},
-"spook": {
-"mod": "hit_chance",
-"rate": -50
+"sing": "sing"
 }
-}
+modifers = {}

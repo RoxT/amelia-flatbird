@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cv18dlnakh3qx"]
+[gd_scene load_steps=4 format=3 uid="uid://cv18dlnakh3qx"]
 
 [ext_resource type="Script" path="res://WalkingAround/HUD.gd" id="1_dajmv"]
 [ext_resource type="Texture2D" uid="uid://rd0l470d0khb" path="res://backgrounds/inventory.jpg" id="2_hwr57"]
+[ext_resource type="PackedScene" uid="uid://del7fl8cjbhul" path="res://WalkingAround/HUD/player_leaf.tscn" id="3_cc5te"]
 
 [node name="HUD" type="CanvasLayer"]
 process_mode = 3
@@ -16,7 +17,7 @@ offset_bottom = 330.0
 
 [node name="Inventory" type="Sprite2D" parent="Bag"]
 show_behind_parent = true
-position = Vector2(276, 341)
+position = Vector2(275, 402)
 texture = ExtResource("2_hwr57")
 
 [node name="Label" type="Label" parent="Bag"]
@@ -46,43 +47,26 @@ offset_bottom = -7.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Health" type="Panel" parent="."]
-offset_left = 305.0
-offset_top = 48.0
-offset_right = 519.0
-offset_bottom = 96.0
-
-[node name="Label" type="Label" parent="Health"]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -21.0
-offset_right = 177.0
-offset_bottom = 21.0
-grow_vertical = 2
-text = "Health: 10"
-
-[node name="Bar" type="ProgressBar" parent="Health"]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -214.0
-offset_top = 43.0
-offset_right = 34.0
-offset_bottom = 85.0
-grow_horizontal = 0
-grow_vertical = 2
-
 [node name="Save" type="Button" parent="."]
-offset_left = 667.0
-offset_top = 51.0
-offset_right = 779.0
-offset_bottom = 109.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -112.0
+offset_bottom = 58.0
+grow_horizontal = 0
 text = "SAVE"
+
+[node name="PlayerLeaf" parent="." instance=ExtResource("3_cc5te")]
+offset_left = 656.0
+offset_top = 40.0
+offset_right = 1184.0
+offset_bottom = 928.0
+
+[node name="AllyLeaf" parent="." instance=ExtResource("3_cc5te")]
+offset_left = 1222.0
+offset_top = 48.0
+offset_right = 1804.0
+offset_bottom = 936.0
 
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="pressed" from="Save" to="." method="_on_save_pressed"]

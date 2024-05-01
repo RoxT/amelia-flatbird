@@ -78,9 +78,9 @@ func _go(foe_name:String):
 
 func set_me_up(node:Node):
 	assert(node.has_method("_on_inventory_changed"))
-	assert(node.has_method("_on_creature_changed"))
 	inventory.inventory_changed.connect(node._on_inventory_changed)
-	creature_changed.connect(node._on_creature_changed)
+	if node.has_method("_on_creature_changed"):
+		creature_changed.connect(node._on_creature_changed)
 	
 func inventory_change(thing:String, amount:=1)->int:
 	return inventory.change(thing, amount)

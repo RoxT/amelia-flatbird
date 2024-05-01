@@ -1,0 +1,107 @@
+[gd_scene load_steps=3 format=3 uid="uid://del7fl8cjbhul"]
+
+[ext_resource type="Script" path="res://WalkingAround/HUD/PlayerLeaf.gd" id="1_doj4v"]
+[ext_resource type="PackedScene" uid="uid://citr7hpyxlrea" path="res://WalkingAround/HUD/an_action_leaf.tscn" id="2_msnaj"]
+
+[node name="PlayerLeaf" type="Panel"]
+offset_left = 648.0
+offset_top = 128.0
+offset_right = 1176.0
+offset_bottom = 1016.0
+script = ExtResource("1_doj4v")
+
+[node name="NameTitle" type="Label" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 16.0
+offset_right = 373.0
+offset_bottom = 58.0
+text = "Amelia the Pheasant"
+
+[node name="BaseAttack" type="Label" parent="."]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 200.0
+offset_right = 394.0
+offset_bottom = 242.0
+text = "Power: 4"
+
+[node name="BaseDefence" type="Label" parent="."]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 242.0
+offset_right = 394.0
+offset_bottom = 284.0
+text = "Defence: 4"
+
+[node name="BaseHitChance" type="Label" parent="."]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 284.0
+offset_right = 394.0
+offset_bottom = 326.0
+text = "Hit Chance: 90%"
+
+[node name="BaseSpeed" type="Label" parent="."]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 326.0
+offset_right = 394.0
+offset_bottom = 368.0
+text = "Speed: 4"
+
+[node name="BaseEvasion" type="Label" parent="."]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 368.0
+offset_right = 394.0
+offset_bottom = 410.0
+text = "Evasion: 5"
+
+[node name="ActionLeaf1" parent="." instance=ExtResource("2_msnaj")]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 432.0
+offset_right = 503.0
+offset_bottom = 568.0
+
+[node name="ActionLeaf2" parent="." instance=ExtResource("2_msnaj")]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 583.0
+offset_right = 501.0
+offset_bottom = 719.0
+
+[node name="ActionLeaf3" parent="." instance=ExtResource("2_msnaj")]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 732.0
+offset_right = 503.0
+offset_bottom = 868.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 40.0
+offset_top = -369.0
+offset_right = 217.0
+offset_bottom = -327.0
+grow_vertical = 2
+text = "Health: 10"
+
+[node name="Bar" type="ProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -488.0
+offset_top = -305.0
+offset_right = -240.0
+offset_bottom = -263.0
+grow_horizontal = 0
+grow_vertical = 2
+show_percentage = false

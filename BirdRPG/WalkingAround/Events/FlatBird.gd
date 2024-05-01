@@ -6,9 +6,15 @@ const RECIEVE := "RECIEVE%s"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	poll()
+	
+func poll():
+	visible = BR.mice_killed >= 2
+	set_process(BR.mice_killed >= 2)
+	
 
 func select():
+	if not visible: return
 	var meeting :=[]
 	for i in range(1,4):
 		var key := MEETING % i
@@ -35,4 +41,5 @@ func battle_finished():
 	var recieve := [tr(RECIEVE % 1), tr(RECIEVE % 2), tr(RECIEVE % 3)]
 	after.append(recieve)
 	BR.scene_message.emit(after)
+	queue_free()
 	

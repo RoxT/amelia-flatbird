@@ -11,7 +11,7 @@ func history(target:String)->String:
 	return HitForDmg % [doer, target, abs(amt)]
 
 func update_calc(creature:Creature):
-	hit_chance -= 100 - creature.base_hit_chance - creature.mod_rate(&"hit_chance")
+	hit_chance -= 100 - creature.base_hit_chance - creature.mod_amount(&"hit_chance")
 	amt = floor((creature.base_attack * 4.0/3.0) + (amt * 5.0/9.0)) as int
 
 func does_hit()->bool:

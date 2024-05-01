@@ -32,9 +32,12 @@ signal new_mod(mod)
 func _init():
 	pass
 	
-func mod_rate(mod_type:String)->float:
+func clamp_health():
+	health = clampi(health, 1, max_health)
+	
+func mod_amount(mod_type:String)->int:
 	if modifers.has(mod_type):
-		return modifers[mod_type].percent_change
+		return modifers[mod_type].amount_change
 	else:
 		return 0
 

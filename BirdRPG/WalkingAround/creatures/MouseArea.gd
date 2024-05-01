@@ -35,6 +35,7 @@ func _process(delta):
 		$Sprite2D.play("default")
 
 func battle_finished():
+	BR.mice_killed += 1
 	queue_free()
 
 func _on_timer_timeout():

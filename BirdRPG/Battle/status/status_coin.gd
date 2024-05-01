@@ -10,19 +10,18 @@ func _ready():
 	status_data.replace.connect(replace_data)
 	direction()
 
-func count_down()->int:
+func count_down()->bool:
 	if status_data.count_down():
 		$AnimationPlayer.play("drop")
-		await $AnimationPlayer.animation_finished
-		return 0
-	return 5
+		return true
+	return false
 
 func replace_data(value:Status):
 	status_data = value
 	direction()
 
 func direction():
-	if status_data.percent_change < 0:
+	if status_data.amount_change < 0:
 		flip_v = true
 		modulate = Color("6aa2ba")
 	else:

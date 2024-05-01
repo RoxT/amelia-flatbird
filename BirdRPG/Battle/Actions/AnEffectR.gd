@@ -20,13 +20,13 @@ func history(target:String)->String:
 func apply(target:Creature):
 	var status := Status.new()
 	status.title = mod
-	status.percent_change = rate
+	status.amount_change = rate
 	if target.modifers.has(mod):
-		if rate < target.modifers[mod].percent_change:
+		if rate < target.modifers[mod].amount_change:
 			target.line_item.emit("Nothing happened!")
 			return
 		else:
-			target.modifers[mod].replace.emit(mod, status)
+			target.modifers[mod].replace.emit(status)
 			target.modifers[mod] = status
 	else:
 		target.modifers[mod] = status

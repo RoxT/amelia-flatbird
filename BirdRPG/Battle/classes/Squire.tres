@@ -4,8 +4,8 @@
 
 [resource]
 script = ExtResource("1_lpqoq")
-health = 10
-max_health = 10
+health = 20
+max_health = 20
 base_attack = 3
 base_defence = 20
 base_speed = 60
@@ -29,3 +29,4 @@ effects = {
 "rate": -50
 }
 }
+modifers = {}

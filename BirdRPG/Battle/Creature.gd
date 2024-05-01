@@ -1,6 +1,6 @@
 extends CanvasItem
 
-const StatusCoin := preload("res://Battle/status/coin.tscn")
+const StatusCoin := preload("res://Battle/status/status_coin.tscn")
 @onready var health_bar := $HealthBar
 @onready var health_label := $HealthLabel
 @onready var label := $Label
@@ -31,7 +31,7 @@ func my_turn():
 	refresh()
 	$Sprite/RingLight.show()
 	for s in $Statuses.get_children():
-		if await s.count_down() == 5:
+		if s.count_down():
 			creature.modifers.erase(s.status_data.title)
 	
 func not_my_turn():

@@ -4,8 +4,8 @@
 
 [resource]
 script = ExtResource("1_d622n")
-health = 20
-max_health = 20
+health = 5
+max_health = 5
 base_attack = 1
 base_defence = 10
 base_speed = 60
@@ -20,3 +20,4 @@ attacks = {
 effects = {
 "spook": &"spook"
 }
+modifers = {}

@@ -6,9 +6,13 @@ const World := preload("res://WalkingAround/starting_area.tscn")
 @export var call_on_return:Callable = no_call
 @onready var inventory:Pack = preload("res://Inventory/UnderWing.tres")
 @onready var scene = get_tree().current_scene
+@onready var WorldState := preload("res://WorldState.gd")
 @export var player_creature:Resource
 @export var ally_creature:Resource
 @export var animations:AnimationPlayer
+
+@export var mice_killed := 0
+@export var entered_marsh := false
 var world:Node2D
 
 signal battle_time(new_foe)
@@ -18,14 +22,19 @@ signal scene_message(scenes)
 signal recieve(thing)
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	player_creature = player_creature.duplicate()
-	if ally_creature: ally_creature = ally_creature.duplicate()
+	load_state()
 	battle_time.connect(_on_battle_time)
 	inventory.change(&"berry")
 	#inventory.change(&"leaf")
 	
 func has_ally()->bool:
 	return ally_creature is Player
+	
+func save_state():
+	WorldState.save_state()
+
+func load_state():
+	WorldState.load_state()
 
 func _on_battle_time(foe_name:String):
 	call_deferred("_go", foe_name)
@@ -43,13 +52,19 @@ func _change_scene(target, _new_pos:=Vector2.ZERO):
 	scene.get_parent().remove_child(scene)
 	add_child(target)
 	scene = target
+	call_deferred("do_polling")
 
+func do_polling():
+	get_tree().call_group("poll", "poll")
 	
 func return_to_world():
 	if not world: world = World.instantiate()
 	_change_scene(world)
 	call_on_return.call()
 	call_on_return = no_call
+	player_creature.clamp_health()
+	if has_ally(): ally_creature.clamp_health()
+	
 	
 func no_call():
 	pass
@@ -89,4 +104,5 @@ func use_item(target:Creature, item_name:String):
 
 func line_item(thing:String)->String:
 	return "%s: %s" % [thing, inventory.stuff[thing]]
+
 

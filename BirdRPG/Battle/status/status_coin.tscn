@@ -1,8 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://bguu4v8d0xp64"]
+[gd_scene load_steps=9 format=3 uid="uid://bguu4v8d0xp64"]
 
-[ext_resource type="Texture2D" uid="uid://xjsl07ke34ff" path="res://Battle/status/up_arrow-export.png" id="1_anp8r"]
-[ext_resource type="Script" path="res://Battle/status/coin.gd" id="2_xtc7p"]
-[ext_resource type="Texture2D" uid="uid://ftymar0okl3d" path="res://Battle/status/attack-export.png" id="3_7o31h"]
+[ext_resource type="Texture2D" uid="uid://xjsl07ke34ff" path="res://Battle/status/up_arrow-export.png" id="1_mpcc6"]
+[ext_resource type="Script" path="res://Battle/status/status_coin.gd" id="2_vn6si"]
+[ext_resource type="Script" path="res://Battle/status/StatusR.gd" id="3_hgs3k"]
+[ext_resource type="Texture2D" uid="uid://ftymar0okl3d" path="res://Battle/status/attack-export.png" id="4_8o48e"]
+
+[sub_resource type="Resource" id="Resource_ag2we"]
+script = ExtResource("3_hgs3k")
+title = "hit_chance"
+amount_change = 0.0
+turns_left = 3
 
 [sub_resource type="Animation" id="Animation_5ir0a"]
 length = 0.001
@@ -79,12 +86,13 @@ _data = {
 }
 
 [node name="Arrow" type="TextureRect"]
-texture = ExtResource("1_anp8r")
-script = ExtResource("2_xtc7p")
+texture = ExtResource("1_mpcc6")
+script = ExtResource("2_vn6si")
+status_data = SubResource("Resource_ag2we")
 
 [node name="Type" type="Sprite2D" parent="."]
 position = Vector2(8, 7)
-texture = ExtResource("3_7o31h")
+texture = ExtResource("4_8o48e")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

@@ -51,3 +51,7 @@ func _on_visibility_changed():
 		else:
 			$Bag/EmptyLabel.hide()
 	_on_creature_changed.call_deferred()
+
+
+func _on_save_pressed():
+	BR.save_state()

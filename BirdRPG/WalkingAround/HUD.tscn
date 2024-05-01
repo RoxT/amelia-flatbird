@@ -77,4 +77,12 @@ offset_bottom = 85.0
 grow_horizontal = 0
 grow_vertical = 2
 
+[node name="Save" type="Button" parent="."]
+offset_left = 667.0
+offset_top = 51.0
+offset_right = 779.0
+offset_bottom = 109.0
+text = "SAVE"
+
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="pressed" from="Save" to="." method="_on_save_pressed"]

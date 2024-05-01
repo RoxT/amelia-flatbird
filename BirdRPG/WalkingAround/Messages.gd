@@ -42,7 +42,7 @@ func _input(event:InputEvent):
 		if i < scene.size():
 			_on_message(scene[i])
 		else:
-			clean_up()
+			clean_up.call_deferred()
 			
 func clean_up():
 	i = 0

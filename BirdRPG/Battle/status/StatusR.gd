@@ -2,7 +2,7 @@ class_name Status
 extends Resource
 
 @export var title := "Status"
-@export var percent_change := 0.0
+@export var amount_change := 0.0
 @export var turns_left := 3
 
 signal replace(title, new_mod)

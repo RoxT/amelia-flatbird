@@ -8,6 +8,9 @@ func _ready():
 	set_process_input(false)
 
 func _on_recieve(thing):
+	_do_recieve.call_deferred(thing)
+	
+func _do_recieve(thing):
 	get_tree().paused = true
 	if thing is Array:
 		queue.append_array(thing)

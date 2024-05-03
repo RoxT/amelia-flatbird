@@ -12,13 +12,8 @@ extends Resource
 @export var base_evasion := 0
 @export var title := "NA"
 @export var image := ""
-@export var attacks := {
-	&"peck": &"peck",
-	&"scratch": &"scratch"
-	}
-@export var effects := {
-	"spook": &"spook"
-}
+@export var attacks: Array[AnAttack] = []
+@export var effects: Array[AnEffect] = []
 const TOP_PATH := "res://Battle/"
 const ActionsPath := "res://Battle/Actions/%s.tres"
 @export var modifers := {}:
@@ -41,17 +36,18 @@ func mod_amount(mod_type:String)->int:
 	else:
 		return 0
 
-func attack_factory(key:="")->AnAction:
-	if key.is_empty():
-		key = random_action()
-	var action = load(ActionsPath % key).duplicate() as AnAction
+func attack_factory(action_template:AnAction)->AnAction:
+	if action_template == null:
+		action_template = random_action()
+	var action = action_template.duplicate() as AnAction
 	action.doer = title
 	action.update_calc(self)
 	return action
 		
-func random_action()->String:
-	var all_actions = attacks.keys().duplicate()
-	all_actions.append_array(effects.keys().duplicate())
+func random_action()->AnAction:
+	var all_actions := []
+	all_actions.append_array(attacks.duplicate())
+	all_actions.append_array(effects.duplicate())
 	return all_actions[randi() % all_actions.size()]
 
 func hit(action:AnAction)->bool:

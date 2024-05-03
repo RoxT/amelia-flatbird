@@ -4,15 +4,19 @@ const Battler := preload("res://Battle/battle.tscn")
 const World := preload("res://WalkingAround/starting_area.tscn")
 @export var new_foe:Foe
 @export var call_on_return:Callable = no_call
-@onready var inventory:Pack = preload("res://Inventory/UnderWing.tres")
+@onready var pack_type:Pack = preload("res://Inventory/underwing.tres")
+@onready var inventory := []
 @onready var scene = get_tree().current_scene
-@onready var WorldState := preload("res://WorldState.gd")
 @export var player_creature:Resource
 @export var ally_creature:Resource
 @export var animations:AnimationPlayer
 
+@onready var WorldState := preload("res://WorldState.gd")
 @export var mice_killed := 0
 @export var entered_marsh := false
+@export var snakes_killed := 0
+@export var intro_seen := false
+const world_state := ["mice_killed", "entered_marsh", "snakes_killed", "intro_seen"]
 var world:Node2D
 
 signal battle_time(new_foe)
@@ -24,8 +28,6 @@ signal recieve(thing)
 func _ready():
 	load_state()
 	battle_time.connect(_on_battle_time)
-	inventory.change(&"berry")
-	#inventory.change(&"leaf")
 	
 func has_ally()->bool:
 	return ally_creature is Player
@@ -65,7 +67,6 @@ func return_to_world():
 	player_creature.clamp_health()
 	if has_ally(): ally_creature.clamp_health()
 	
-	
 func no_call():
 	pass
 	
@@ -73,36 +74,16 @@ func _go(foe_name:String):
 	#new_foe = load(Foe.path() + foe_name + ".tres") as Foe
 	#get_tree().change_scene_to_packed(Battler)
 	var battler := Battler.instantiate()
-	new_foe = load(Foe.path() + foe_name + ".tres").duplicate() as Foe
+	new_foe = BR.load_and_dupe(Foe.path(), foe_name) as Foe
 	_change_scene(battler)
 
 func set_me_up(node:Node):
-	assert(node.has_method("_on_inventory_changed"))
-	inventory.inventory_changed.connect(node._on_inventory_changed)
 	if node.has_method("_on_creature_changed"):
 		creature_changed.connect(node._on_creature_changed)
-	
-func inventory_change(thing:String, amount:=1)->int:
-	return inventory.change(thing, amount)
-	
-func inventory_has_enough(thing:String, amount:=1)->bool:
-	return inventory.has_enough(thing, amount)
-	
-func inventory_has_room(thing:String, amount:=1)->bool:
-	return inventory.has_room(thing, amount)
+		
+func max_stack()->int:
+	return pack_type.max_stack
 
-func all_inventory()->Dictionary:
-	return inventory.stuff
-	
-func change_inventory(new_type:String):
-	var new_inv = BR.dup_by_key(Pack.PATH, new_type)
-	new_inv.stuff = inventory.stuff
-	inventory = new_inv
-
-func use_item(target:Creature, item_name:String):
-	inventory.use(target, item_name, world.name == "Battle")
-
-func line_item(thing:String)->String:
-	return "%s: %s" % [thing, inventory.stuff[thing]]
-
+func load_and_dupe(path:String, title:String)->Resource:
+	return load(path + title + ".tres").duplicate()
 

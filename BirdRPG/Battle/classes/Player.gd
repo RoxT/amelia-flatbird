@@ -1,6 +1,6 @@
 extends "res://Battle/Creature.gd"
 
-var key:String
+var action:AnAction
 var details:Dictionary
 var last_action:Control
 
@@ -17,15 +17,16 @@ func _ready():
 			creature = BR.player_creature
 	super._ready()
 	shake = -shake
-	var keys:Array = creature.attacks.keys()
-	keys.append_array(creature.effects.keys())
-	connect_action($Peck, keys[0])
-	connect_action($Claw, keys[1])
-	connect_action($Spook, keys[2])
+	var actions:= []
+	actions.append_array(creature.attacks.duplicate())
+	actions.append_array(creature.effects.duplicate())
+	connect_action($Peck, actions[0])
+	connect_action($Claw, actions[1])
+	connect_action($Spook, actions[2])
 
-func _on_action_pressed(action:String, button:Button):
+func _on_action_pressed(value:AnAction, button:Button):
 	last_action = button
-	key = action
+	action = value
 	attack()
 	
 func my_turn():
@@ -47,10 +48,10 @@ func not_my_turn():
 	$Spook.hide()
 
 func attack_anim_finished():
-	action_requested.emit(creature.attack_factory(key))
+	action_requested.emit(creature.attack_factory(action))
 
-func connect_action(button:Button, action:String):
-	button.text = action
-	button.pressed.connect(_on_action_pressed.bind(action, button))
+func connect_action(button:Button, value:AnAction):
+	button.text = value.title
+	button.pressed.connect(_on_action_pressed.bind(value, button))
 
 

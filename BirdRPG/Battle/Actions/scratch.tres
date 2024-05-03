@@ -7,3 +7,4 @@ script = ExtResource("1_4mh5j")
 power = 2
 doer = "Who?"
 hit_chance = 100
+title = "scratch"

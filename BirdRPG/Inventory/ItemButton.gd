@@ -7,9 +7,6 @@ func _ready():
 	assert(item is Item)
 	assert(target is Creature)
 	do_label()
-
-func _on_pressed():
-	BR.use_item(target, item.singular)
 	
 func do_label():
 	if item.amount < 1:

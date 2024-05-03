@@ -12,6 +12,8 @@ config_version=5
 
 config/name="RPGBattle"
 run/main_scene="res://WalkingAround/starting_area.tscn"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="BirdRPG"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.png"
 

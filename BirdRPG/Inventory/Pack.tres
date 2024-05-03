@@ -4,8 +4,7 @@
 
 [resource]
 script = ExtResource("1_0mulv")
-stuff = {}
 max_stack = 10
-title = "Pack"
+title = "pack"
 empty_str = "There's nothing in the pack."
 no_room_str = "There no more room in here."

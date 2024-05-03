@@ -6,7 +6,6 @@
 
 [node name="HUD" type="CanvasLayer"]
 process_mode = 3
-visible = false
 script = ExtResource("1_dajmv")
 
 [node name="Bag" type="Panel" parent="."]
@@ -46,6 +45,30 @@ offset_right = -5.0
 offset_bottom = -7.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="itemLeaf" type="Panel" parent="Bag"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 288.0
+offset_right = 467.0
+offset_bottom = 456.0
+
+[node name="Label" type="Label" parent="Bag/itemLeaf"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 8.0
+offset_right = 453.0
+offset_bottom = 114.0
+text = "Reduce enemy's defence by %50 in battle."
+autowrap_mode = 2
+
+[node name="Use" type="Button" parent="Bag/itemLeaf"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 96.0
+offset_right = 141.0
+offset_bottom = 154.0
+text = "Use"
 
 [node name="Save" type="Button" parent="."]
 anchors_preset = 1

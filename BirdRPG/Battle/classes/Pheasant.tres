@@ -1,6 +1,9 @@
-[gd_resource type="Resource" script_class="Player" load_steps=2 format=3 uid="uid://dij4cjqimdual"]
+[gd_resource type="Resource" script_class="Player" load_steps=5 format=3]
 
 [ext_resource type="Script" path="res://Battle/classes/PlayerR.gd" id="1_13i5h"]
+[ext_resource type="Resource" path="res://Battle/Actions/peck.tres" id="1_ldino"]
+[ext_resource type="Resource" path="res://Battle/Actions/scratch.tres" id="2_vufhy"]
+[ext_resource type="Resource" path="res://Battle/Actions/kick.tres" id="3_bwvpj"]
 
 [resource]
 script = ExtResource("1_13i5h")
@@ -13,10 +16,6 @@ base_hit_chance = 100
 base_evasion = 10
 title = "Pheasant"
 image = "bird"
-attacks = {
-"kick": "kick",
-"peck": "peck",
-"scratch": "scratch"
-}
-effects = {}
+attacks = Array[Resource("res://Battle/Actions/AnAttackR.gd")]([ExtResource("1_ldino"), ExtResource("2_vufhy"), ExtResource("3_bwvpj")])
+effects = Array[Resource("res://Battle/Actions/AnEffectR.gd")]([])
 modifers = {}

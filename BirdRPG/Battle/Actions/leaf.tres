@@ -8,3 +8,4 @@ mod = "defence"
 rate = -40
 doer = "Who?"
 hit_chance = 100
+title = "leaf"

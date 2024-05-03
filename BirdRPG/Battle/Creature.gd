@@ -66,7 +66,7 @@ func attack():
 	tween.tween_callback(attack_anim_finished)
 
 func attack_anim_finished():
-	action_requested.emit(creature.attack_factory())
+	action_requested.emit(creature.attack_factory(creature.random_action()))
 
 func hit(action:AnAction):
 	var lost = creature.hit(action)

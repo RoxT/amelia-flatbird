@@ -3,6 +3,7 @@ extends Resource
 
 @export var doer := "Who?"
 @export var hit_chance := 100
+@export var title := "Dance"
 const PATH := "res://Battle/Actions/"
 
 func _init():

@@ -4,8 +4,7 @@
 
 [resource]
 script = ExtResource("1_0kcot")
-stuff = {}
 max_stack = 3
-title = "Under Wing"
+title = "under_wing"
 empty_str = "You've got nothing on you."
 no_room_str = "There's no more room on your person."

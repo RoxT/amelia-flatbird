@@ -1,13 +1,12 @@
 extends Control
 
-@export var key:String
+@export var action:AnAction
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
-	var action = load(AnAction.PATH + key + ".tres")
 	
-	$Title.text = key
+	$Title.text = action.title
 	if action is AnEffect:
 		$Thing1.text = "Target: %s" % action.mod
 		$Thing2.text = "Amount: %s" % action.rate

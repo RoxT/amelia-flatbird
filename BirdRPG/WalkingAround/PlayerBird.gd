@@ -2,15 +2,15 @@ extends CharacterBody2D
 
 @onready var sprite := $Sprite2D
 const SPEED = 400.0
-@export var do_intro := false
 @export var zoom := 2
 
 func _ready():
 	BR.world = get_parent()
 	$Camera2D.zoom = Vector2(zoom, zoom)
-	if do_intro: 
+	if not BR.intro_seen: 
 		$AnimationPlayer.play("intro")
 		set_physics_process(false)
+		BR.intro_seen = true
 
 func _physics_process(_delta):
 

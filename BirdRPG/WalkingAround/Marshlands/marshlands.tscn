@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://mx045w7big6e"]
+[gd_scene load_steps=24 format=3 uid="uid://mx045w7big6e"]
 
 [ext_resource type="TileSet" uid="uid://cxcb7wfe3ytfh" path="res://WalkingAround/Tiles/walking_around_tilesets.tres" id="1_7d2yn"]
 [ext_resource type="PackedScene" uid="uid://bdic3br0kyrud" path="res://WalkingAround/door.tscn" id="2_25urm"]
@@ -17,6 +17,7 @@
 [ext_resource type="Script" path="res://WalkingAround/Marshlands/SomeBerries.gd" id="15_bjhtg"]
 [ext_resource type="Texture2D" uid="uid://dklhevccxajd0" path="res://WalkingAround/objects/barrel.png" id="16_erc53"]
 [ext_resource type="Texture2D" uid="uid://lwst0d2g00vs" path="res://WalkingAround/objects/just_berries.png" id="17_yh0yy"]
+[ext_resource type="PackedScene" uid="uid://br8pvyhx1x2fr" path="res://WalkingAround/Marshlands/enemies/snake_area.tscn" id="18_721ah"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yuorh"]
 size = Vector2(728, 480)
@@ -132,7 +133,7 @@ texture = ExtResource("13_xgxfy")
 shape = SubResource("CircleShape2D_ht0n2")
 
 [node name="OldFrog" parent="People" instance=ExtResource("12_15vqu")]
-messages = Array[String](["Guard: Flat bird the knight! I'm so glad you're here. Those monsterous Salamanders are still living on the Beaver's lakes. Get rid of them please!", "Flat Bird: Indeed! I brought someone who can help. ", "Flat Bird: Amelia, the Giant Salamanders are powerful but each in one way only. If we can figure out if a Salamander is has strong attack or defence, you can target that with your performances."])
+messages = Array[String](["Guard: Flat bird the knight! I'm so glad you're here. Those monsterous Salamanders are still living on the Beavers' lakes. Get rid of them please!", "Flat Bird: Indeed! I brought someone who can help. ", "Flat Bird: Amelia, the Giant Salamanders are powerful but each in one way only. If we can figure out if a Salamander is has strong attack or defence, you can target that with your performances."])
 
 [node name="Sprite2D" type="Sprite2D" parent="People/OldFrog"]
 texture = ExtResource("13_xgxfy")
@@ -333,6 +334,27 @@ texture = ExtResource("16_erc53")
 [node name="Berries" type="Sprite2D" parent="SomeBerries"]
 position = Vector2(0, -24)
 texture = ExtResource("17_yh0yy")
+
+[node name="SnakeArea" parent="." instance=ExtResource("18_721ah")]
+position = Vector2(2808, 1224)
+
+[node name="SnakeArea2" parent="." instance=ExtResource("18_721ah")]
+position = Vector2(1181, 1056)
+
+[node name="SnakeArea3" parent="." instance=ExtResource("18_721ah")]
+position = Vector2(632, 848)
+
+[node name="SnakeArea4" parent="." instance=ExtResource("18_721ah")]
+position = Vector2(1096, 922)
+
+[node name="SnakeArea5" parent="." instance=ExtResource("18_721ah")]
+position = Vector2(3000, 1000)
+
+[node name="SnakeArea6" parent="." instance=ExtResource("18_721ah")]
+position = Vector2(1616, 374)
+
+[node name="SnakeArea7" parent="." instance=ExtResource("18_721ah")]
+position = Vector2(456, 1992)
 
 [connection signal="body_entered" from="Salamander" to="Salamander" method="_on_body_entered"]
 [connection signal="body_exited" from="Salamander" to="Salamander" method="_on_body_exited"]

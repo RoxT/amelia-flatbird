@@ -21,11 +21,11 @@ func leaf(new_data:Player):
 	do_label("hit_chance")
 	do_label("evasion")
 	var i = 1
-	for key in data.attacks.keys():
-		get_node("ActionLeaf%s" % i).leaf(key)
+	for action in data.attacks:
+		get_node("ActionLeaf%s" % i).leaf(action)
 		i += 1
-	for key in data.effects.keys():
-		get_node("ActionLeaf%s" % i).leaf(key)
+	for action in data.effects:
+		get_node("ActionLeaf%s" % i).leaf(action)
 		i += 1
 		
 func do_label(prop:String):

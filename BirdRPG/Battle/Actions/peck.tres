@@ -7,3 +7,4 @@ script = ExtResource("1_ssfxr")
 power = 3
 doer = "Who?"
 hit_chance = 90
+title = "peck"

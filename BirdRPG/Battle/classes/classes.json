@@ -9,13 +9,12 @@
 		"base_speed" : 60,
 		"base_hit_chance" : 100,
 		"base_evasion" : 0,
-		"attacks": {
-			"peck": "peck"
-		},
-		"effects": {
-			"spook": "spook",
-			"sing": "sing"
-		}
+		"attacks": 
+		["peck"],
+		"effects": 
+		["spook",
+		"sing"]
+		
 	},
 	{
 		"title": "Pheasant",
@@ -27,12 +26,12 @@
 		"base_speed" : 60,
 		"base_hit_chance" : 100,
 		"base_evasion" : 10,
-		"attacks": {
-			"peck": "peck",
-			"scratch": "scratch",
-			"kick": "kick"
-		},
-		"effects": {}
+		"attacks": 
+		["peck",
+		"scratch",
+		"kick"]
+		,
+		"effects": []
 	},
 	{
 		"title": "Knight",
@@ -44,12 +43,12 @@
 		"base_speed" : 60,
 		"base_hit_chance" : 100,
 		"base_evasion" : 0,
-		"attacks": {
-			"peck": "peck",
-			"kick": "kick"
-		},
-		"effects": {
-			"sing": "sing"
-		}
+		"attacks": 
+		["peck",
+		"kick"]
+		,
+		"effects": 
+		["flair"]
+		
 	}
 ]

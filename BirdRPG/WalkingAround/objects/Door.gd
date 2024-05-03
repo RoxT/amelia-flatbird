@@ -15,4 +15,5 @@ func _on_body_entered(body:Node2D):
 		BR.animations.animation_finished.connect(_change_scene)
 		
 func _change_scene(_anim_name:StringName):
-	BR._change_scene(load(path_to_go).instantiate(), new_position)
+	var packed_scene := load(path_to_go) as PackedScene
+	BR.change_scene(packed_scene, new_position)

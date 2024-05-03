@@ -43,6 +43,6 @@ func _on_timer_timeout():
 		waiting = true
 
 func _on_body_entered(body):
-	if body.name == "PlayerBird":
+	if body.name == "PlayerBird" and body.is_physics_processing():
 		attacking = body
 		SPEED = abs(SPEED)

@@ -1,31 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://br4lbolyi3ocb"]
+[gd_scene load_steps=12 format=3 uid="uid://br4lbolyi3ocb"]
 
 [ext_resource type="Script" path="res://WalkingAround/PlayerBird.gd" id="1_7uog1"]
-[ext_resource type="Texture2D" uid="uid://bpyajp45v1it3" path="res://WalkingAround/bird.png" id="2_777v4"]
+[ext_resource type="SpriteFrames" uid="uid://3umme616cwrw" path="res://WalkingAround/player_bird_spriteframes.tres" id="2_vo268"]
 [ext_resource type="AudioStream" uid="uid://da6j06u1wykjy" path="res://WalkingAround/Events/RunningWater.WAV" id="3_q8srd"]
 [ext_resource type="AudioStream" uid="uid://dgq1wa4euqm56" path="res://Sounds/rain to birds.ogg" id="4_2fy7v"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_eub0s"]
-atlas = ExtResource("2_777v4")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_36upe"]
-atlas = ExtResource("2_777v4")
-region = Rect2(64, 0, 64, 64)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ae2lu"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_eub0s")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_36upe")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v77xr"]
 radius = 18.0
@@ -81,6 +59,30 @@ tracks/3/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Ally:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Ally:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_87caw"]
 resource_name = "intro"
@@ -107,7 +109,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 3.4, 9.3),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(5, 5), Vector2(5, 5), Vector2(1, 1)]
+"values": [Vector2(5, 5), Vector2(5, 5), Vector2(2, 2)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -128,9 +130,12 @@ tracks/3/path = NodePath(".")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(9.2),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(9.1, 9.2),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
+"args": [true],
+"method": &"set_process_unhandled_key_input"
+}, {
 "args": [true],
 "method": &"set_physics_process"
 }]
@@ -148,10 +153,90 @@ tracks/4/keys = {
 "values": [true]
 }
 
+[sub_resource type="Animation" id="Animation_b05qd"]
+resource_name = "listening"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Ally:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(64, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Ally:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Ally:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_jh26d"]
+resource_name = "returning"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Ally:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(64, 0), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Ally:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Ally:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_l41ip"]
 _data = {
 "RESET": SubResource("Animation_bw27w"),
-"intro": SubResource("Animation_87caw")
+"intro": SubResource("Animation_87caw"),
+"listening": SubResource("Animation_b05qd"),
+"returning": SubResource("Animation_jh26d")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gdpdr"]
@@ -164,7 +249,7 @@ script = ExtResource("1_7uog1")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_ae2lu")
+sprite_frames = ExtResource("2_vo268")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_v77xr")
@@ -185,3 +270,8 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectSeeker"]
 shape = SubResource("CircleShape2D_gdpdr")
+
+[node name="Ally" type="AnimatedSprite2D" parent="."]
+visible = false
+sprite_frames = ExtResource("2_vo268")
+flip_h = true

@@ -14,6 +14,6 @@ func select():
 			$Berries.hide()
 		else:
 			BR.simple_message.emit("There are 3 berries. " + 
-			BR.inventory.no_room_str)
+			BR.pack_type.no_room_str)
 	else:
 		BR.simple_message.emit("The barrel is empty.")

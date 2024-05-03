@@ -101,6 +101,7 @@ hframes = 2
 [node name="Door" parent="Objects" instance=ExtResource("12_c4xpf")]
 position = Vector2(960, 224)
 path_to_go = "res://WalkingAround/Marshlands/marshlands.tscn"
+new_position = null
 
 [node name="Gate" type="StaticBody2D" parent="Objects" groups=["poll"]]
 position = Vector2(912, 264)

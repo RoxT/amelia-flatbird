@@ -6,6 +6,7 @@
 
 [node name="HUD" type="CanvasLayer"]
 process_mode = 3
+visible = false
 script = ExtResource("1_dajmv")
 
 [node name="Bag" type="Panel" parent="."]

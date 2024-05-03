@@ -31,8 +31,9 @@ static func load_state():
 			return {}
 		for key in BR.world_state:
 			BR.set(key, config.get_value("WS", key))
-			
-		BR.pack_type = load(Pack.PATH + config.get_value("Special", "pack_type") + ".tres") as Pack
+		
+		var pack_path:String = Pack.PATH + config.get_value("Special", "pack_type") + ".tres"
+		BR.pack_type = load(pack_path) as Pack
 		
 		if OS.is_debug_build() and BR.player_creature != null:
 			BR.player_creature = BR.player_creature.duplicate() as Player

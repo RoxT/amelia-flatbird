@@ -49,4 +49,5 @@ func clean_up():
 	scene = []
 	set_process_input(false)
 	get_tree().paused = false
+	BR.end_scene.emit()
 	hide()

@@ -1,16 +1,22 @@
 extends CharacterBody2D
 
 @onready var sprite := $Sprite2D
+@onready var camera := $Camera2D
 const SPEED = 400.0
-@export var zoom := 2
+const SceneZoom := Vector2(4, 4)
+const NormalZoom := Vector2(2, 2)
 
 func _ready():
-	BR.world = get_parent()
-	$Camera2D.zoom = Vector2(zoom, zoom)
+	BR.initiate_special_scene.connect(_talk_with_ally)
+	BR.end_scene.connect(_end_scene)
 	if not BR.intro_seen: 
 		$AnimationPlayer.play("intro")
 		set_physics_process(false)
+		set_process_unhandled_key_input(false)
 		BR.intro_seen = true
+	else:
+		camera.zoom = NormalZoom
+		
 
 func _physics_process(_delta):
 
@@ -40,4 +46,29 @@ func _unhandled_key_input(event:InputEvent):
 			get_viewport().set_input_as_handled()
 			closest.select()
 			
+func _talk_with_ally(face_ally:=false):
+	$Sprite2D.flip_h = not face_ally
+	set_physics_process(false)
+	set_process_unhandled_key_input(false)
+	
+	var zoom_tween := create_tween()
+	zoom_tween.tween_property(camera, "zoom", SceneZoom, 1)
+	if BR.has_ally():
+		$AnimationPlayer.play("listening")
+		await $AnimationPlayer.animation_finished
+	call_deferred("allow_begin_scene")
+	#tween.tween_callback($Sprite.queue_free)
 
+func allow_begin_scene():
+	BR.begin_scene.emit()	
+
+func _end_scene():
+	if is_physics_processing(): return
+	var zoom_tween := create_tween()
+	zoom_tween.tween_property(camera, "zoom", NormalZoom, 1)
+	if BR.has_ally():
+		$AnimationPlayer.play("return")
+		await $AnimationPlayer.animation_finished
+
+	set_physics_process(true)
+	set_process_unhandled_key_input(true)

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Foe" load_steps=5 format=3 uid="uid://it0i4x1qh1fi"]
+
+[ext_resource type="Resource" uid="uid://o1xnkfy7w41l" path="res://Battle/Actions/kick.tres" id="1_7kdpm"]
+[ext_resource type="Resource" uid="uid://6hu4l0g32cwq" path="res://Battle/Actions/scratch.tres" id="2_3t5tk"]
+[ext_resource type="Resource" uid="uid://bbt3ywcp8x5ih" path="res://Battle/Actions/bite.tres" id="3_fwkq8"]
+[ext_resource type="Script" path="res://Battle/foes/FoeR.gd" id="4_abdyq"]
+
+[resource]
+script = ExtResource("4_abdyq")
+health = 50
+max_health = 50
+base_attack = 3
+base_defence = 10
+base_speed = 60
+base_hit_chance = 100
+base_evasion = 5
+title = "Salamanders Blue"
+image = "salamanders_blue.jpg"
+attacks = Array[Resource("res://Battle/Actions/AnAttackR.gd")]([ExtResource("1_7kdpm"), ExtResource("2_3t5tk"), ExtResource("3_fwkq8")])
+effects = Array[Resource("res://Battle/Actions/AnEffectR.gd")]([])
+modifers = {}

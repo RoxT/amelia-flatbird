@@ -17,7 +17,11 @@ func _process(delta):
 		sprite.global_position.y = move_toward(sprite.global_position.y, attacking.position.y, SPEED*delta*2)
 		if sprite.global_position.distance_squared_to(attacking.position) < 3:
 			BR.call_on_return = battle_finished
-			BR.simple_message.emit(&"Salamanders")
+			var tex:Texture = sprite.texture
+			if tex.load_path.contains("blue"):
+				BR.simple_message.emit(&"SalamandersBlue")
+			else:
+				BR.simple_message.emit(&"SalamandersRed")
 		sprite.flip_h = sprite.position.x < attacking.position.x
 		#$Sprite2D.play("default")
 

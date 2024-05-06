@@ -13,6 +13,6 @@ func select():
 			picked_up = true
 			$Sprite2D.frame = 1
 		else:
-			BR.simple_message.emit(BR.inventory.no_room_str)
+			BR.simple_message.emit("You don't have enough room for all 3 in your pack.")
 	else:
 		BR.simple_message.emit("The barrel is empty.")

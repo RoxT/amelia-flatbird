@@ -57,6 +57,3 @@ func start_turn():
 			turns[i].my_turn()
 		else:
 			turns[i].not_my_turn()
-			
-func _on_bag_pressed():
-	$Bag.show()

@@ -6,11 +6,12 @@ func _ready():
 	pass # Replace with function body.
 
 func select():
-	if BR.inventory_has_room(&"berry"):
-		BR.inventory_change(&"berry")
+	var berries:Item = BR.find_item(&"berry")
+	if berries.has_room():
+		berries.amount += 1
 		BR.recieve.emit("You picked up a berry. There are plenty left")
 	else:
-		BR.simple_message.emit(BR.inventory.no_room_str)
+		BR.simple_message.emit(BR.pack_type.no_room_str)
 
 #func _on_body_entered(body):
 	#if body.name == "PlayerBird":

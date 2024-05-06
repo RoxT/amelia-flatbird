@@ -57,6 +57,7 @@ position = Vector2(32, 256)
 rotation = -1.5708
 script = ExtResource("8_nyal2")
 path_to_go = "res://WalkingAround/Marshlands/marshlands.tscn"
+new_position = Vector2(1024, -64)
 metadata/_edit_group_ = true
 
 [node name="OpenDoor" type="Sprite2D" parent="Door"]

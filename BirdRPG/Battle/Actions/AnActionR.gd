@@ -24,3 +24,4 @@ func does_hit()->bool:
 func apply(_target:Creature):
 	push_error("Not implemented")
 	assert(false)
+

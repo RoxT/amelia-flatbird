@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_1daq7")
-amt = 5
+power = 5
 doer = "Who?"
 hit_chance = 100
+title = "berry"

@@ -93,4 +93,5 @@ offset_right = 1804.0
 offset_bottom = 936.0
 
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="pressed" from="Bag/itemLeaf/Use" to="." method="_on_use_pressed"]
 [connection signal="pressed" from="Save" to="." method="_on_save_pressed"]

@@ -16,7 +16,8 @@ func _ready():
 		BR.intro_seen = true
 	else:
 		camera.zoom = NormalZoom
-		
+	BR.teleport_player(self)
+
 
 func _physics_process(_delta):
 

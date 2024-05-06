@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_ai2xl")
 mod = "defence"
-rate = -40
+rate = -60
 doer = "Who?"
 hit_chance = 100
 title = "leaf"

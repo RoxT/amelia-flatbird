@@ -23,11 +23,24 @@ func _ready():
 	connect_action($Peck, actions[0])
 	connect_action($Claw, actions[1])
 	connect_action($Spook, actions[2])
+	$Bag.pressed.connect(_on_bag_pressed)
+	$BagLayer/Inventory.item_actioned.connect(_on_item_actioned)
+	$BagLayer/Inventory.visibility_changed.connect(_on_inventory_visibility_changed)
+	
+func _on_item_actioned(value:AnAction):
+	_on_action_pressed(value, $Bag)
 
 func _on_action_pressed(value:AnAction, button:Button):
 	last_action = button
 	action = value
+	$Peck.hide()
+	$Claw.hide()
+	$Spook.hide()
+	$Bag.hide()
 	attack()
+
+func _on_bag_pressed():
+	$BagLayer/Inventory.visible = not $BagLayer/Inventory.visible
 	
 func my_turn():
 	super.my_turn()
@@ -35,6 +48,7 @@ func my_turn():
 	$Peck.show()
 	$Claw.show()
 	$Spook.show()
+	$Bag.show()
 	if last_action:
 		last_action.grab_focus()
 	else:
@@ -46,6 +60,7 @@ func not_my_turn():
 	$Peck.hide()
 	$Claw.hide()
 	$Spook.hide()
+	$Bag.hide()
 
 func attack_anim_finished():
 	action_requested.emit(creature.attack_factory(action))
@@ -54,4 +69,6 @@ func connect_action(button:Button, value:AnAction):
 	button.text = value.title
 	button.pressed.connect(_on_action_pressed.bind(value, button))
 
-
+func _on_inventory_visibility_changed():
+	if not $BagLayer/Inventory.visible:
+		$Bag.grab_focus()

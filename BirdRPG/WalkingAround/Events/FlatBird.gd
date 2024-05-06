@@ -33,7 +33,6 @@ func select():
 	BR.call_on_return = battle_finished
 	
 func battle_finished():
-	BR.end_scene.emit()
 	var after :=[]
 	for i in range(1,5):
 		var key := AFTER % i
@@ -45,7 +44,13 @@ func battle_finished():
 	BR.ally_creature = BR.load_by_key(Player.path(), "Knight").duplicate()
 	BR.player_creature = BR.load_by_key(Player.path(), "Squire").duplicate()
 	var recieve := [tr(RECIEVE % 1), tr(RECIEVE % 2), tr(RECIEVE % 3)]
+	BR.pack_type = BR.load_and_dupe(Pack.PATH, "pack") as Pack
+	BR.find_item(&"berry").amount = BR.max_stack()
 	after.append(recieve)
+	await BR.end_scene
 	BR.scene_message.emit(after)
-	queue_free()
+	await BR.end_scene
+	var tween := create_tween()
+	tween.tween_property($Sprite2D, "position", BR.find_player_node().position, 0.5)
+	tween.tween_callback(queue_free)
 	

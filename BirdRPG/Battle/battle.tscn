@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://Battle/foes/Foe.gd" id="2_inowl"]
 [ext_resource type="Texture2D" uid="uid://dw5x845qxfbwo" path="res://Battle/classes/bird.png" id="2_tyggp"]
 [ext_resource type="Texture2D" uid="uid://cpdrgsuxwybw7" path="res://Battle/classes/flat_bird.png" id="3_q2ylu"]
-[ext_resource type="Resource" uid="uid://it0i4x1qh1fi" path="res://Battle/foes/Salamanders.tres" id="4_mj703"]
+[ext_resource type="Resource" uid="uid://it0i4x1qh1fi" path="res://Battle/foes/SalamandersBlue.tres" id="4_ygxkv"]
 [ext_resource type="Texture2D" uid="uid://lsm5pvkx5j0u" path="res://Battle/foes/salamanders.jpg" id="5_3386g"]
 [ext_resource type="Texture2D" uid="uid://dbplj6dmfdkbo" path="res://Battle/classes/flat_bird_.png" id="6_j241i"]
 [ext_resource type="Script" path="res://Battle/classes/Player.gd" id="6_kerbk"]
@@ -48,17 +48,9 @@ offset_bottom = 359.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_gwmsd")
 text = "History"
 
-[node name="Bag" type="Button" parent="ActionPanel"]
-layout_mode = 0
-offset_left = 877.0
-offset_top = 282.0
-offset_right = 1197.0
-offset_bottom = 359.0
-text = "Bag"
-
 [node name="Foe" type="Node2D" parent="."]
 script = ExtResource("2_inowl")
-creature = ExtResource("4_mj703")
+creature = ExtResource("4_ygxkv")
 
 [node name="Sprite" type="Sprite2D" parent="Foe"]
 position = Vector2(1597, 276)
@@ -155,6 +147,13 @@ offset_right = 1785.0
 offset_bottom = 939.0
 text = "Spook"
 
+[node name="Bag" type="Button" parent="Ally"]
+offset_left = 1465.0
+offset_top = 952.0
+offset_right = 1785.0
+offset_bottom = 1029.0
+text = "Bag"
+
 [node name="Label" type="Label" parent="Ally"]
 offset_left = 618.0
 offset_top = 759.0
@@ -163,6 +162,23 @@ offset_bottom = 801.0
 text = "Feral Pheasant"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="BagLayer" type="CanvasLayer" parent="Ally"]
+
+[node name="Inventory" type="Panel" parent="Ally/BagLayer"]
+visible = false
+offset_left = 1042.0
+offset_top = 670.0
+offset_right = 1839.0
+offset_bottom = 1047.0
+script = ExtResource("12_hfl61")
+
+[node name="FlowContainer" type="VFlowContainer" parent="Ally/BagLayer/Inventory"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 16.0
+offset_right = 769.0
+offset_bottom = 359.0
 
 [node name="Player" type="Node2D" parent="."]
 script = ExtResource("6_kerbk")
@@ -187,6 +203,13 @@ offset_top = 864.0
 offset_right = 1785.0
 offset_bottom = 939.0
 text = "Spook"
+
+[node name="Bag" type="Button" parent="Player"]
+offset_left = 1465.0
+offset_top = 952.0
+offset_right = 1785.0
+offset_bottom = 1029.0
+text = "Bag"
 
 [node name="HealthBar" type="ProgressBar" parent="Player"]
 offset_left = 1088.0
@@ -226,21 +249,22 @@ offset_top = 592.0
 offset_right = 863.0
 offset_bottom = 656.0
 
-[node name="Bag" type="Panel" parent="."]
+[node name="BagLayer" type="CanvasLayer" parent="Player"]
+
+[node name="Inventory" type="Panel" parent="Player/BagLayer"]
 visible = false
-layout_mode = 0
 offset_left = 1042.0
 offset_top = 670.0
 offset_right = 1839.0
 offset_bottom = 1047.0
 script = ExtResource("12_hfl61")
 
-[node name="FlowContainer" type="VFlowContainer" parent="Bag"]
+[node name="FlowContainer" type="VFlowContainer" parent="Player/BagLayer/Inventory"]
 layout_mode = 0
 offset_left = 23.0
 offset_top = 16.0
 offset_right = 769.0
 offset_bottom = 359.0
 
-[connection signal="pressed" from="ActionPanel/Bag" to="." method="_on_bag_pressed"]
-[connection signal="visibility_changed" from="Bag" to="Bag" method="_on_visibility_changed"]
+[connection signal="visibility_changed" from="Ally/BagLayer/Inventory" to="Ally/BagLayer/Inventory" method="_on_visibility_changed"]
+[connection signal="visibility_changed" from="Player/BagLayer/Inventory" to="Player/BagLayer/Inventory" method="_on_visibility_changed"]

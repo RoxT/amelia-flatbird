@@ -9,4 +9,4 @@ plural = "leaves"
 amount = 0
 use_field = &""
 use_battle = &"leaf"
-desc = "A toxic leaf that distracts enemies in battle."
+desc = "A toxic leaf that distracts enemies in battle, lowering defence by 60%."

@@ -52,7 +52,7 @@ func _on_button_pressed(btn:Button, thing:Item):
 	$Bag/itemLeaf/Label.text = thing.desc
 	item_selected = thing
 	btn_selected = btn
-	$Bag/itemLeaf/Use.disabled = thing.use_field.is_empty()
+	$Bag/itemLeaf/Use.visible = not thing.use_field.is_empty()
 	if thing.singular == &"berry":
 		if BR.player_creature.health >= BR.player_creature.max_health:
 			$Bag/itemLeaf/Use.disabled = true

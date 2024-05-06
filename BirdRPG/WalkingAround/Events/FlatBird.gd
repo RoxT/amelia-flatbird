@@ -6,12 +6,13 @@ const RECIEVE := "RECIEVE%s"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	poll()
-
-func poll():
 	if BR.has_ally():
 		queue_free()
 		return
+	poll()
+
+func poll():
+
 	visible = BR.mice_killed >= 2
 	set_process(BR.mice_killed >= 2)
 	
@@ -33,6 +34,8 @@ func select():
 	BR.call_on_return = battle_finished
 	
 func battle_finished():
+	collision_layer = 0
+	collision_mask = 0
 	var after :=[]
 	for i in range(1,5):
 		var key := AFTER % i
@@ -47,10 +50,12 @@ func battle_finished():
 	BR.pack_type = BR.load_and_dupe(Pack.PATH, "pack") as Pack
 	BR.find_item(&"berry").amount = BR.max_stack()
 	after.append(recieve)
-	await BR.end_scene
 	BR.scene_message.emit(after)
 	await BR.end_scene
 	var tween := create_tween()
-	tween.tween_property($Sprite2D, "position", BR.find_player_node().position, 0.5)
+	
+	var player = get_node("/root/StartingArea/PlayerBird")
+
+	tween.tween_property($Sprite2D, "global_position", player.position, 0.5)
 	tween.tween_callback(queue_free)
 	

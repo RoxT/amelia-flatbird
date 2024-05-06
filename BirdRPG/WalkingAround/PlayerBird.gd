@@ -17,6 +17,7 @@ func _ready():
 	else:
 		camera.zoom = NormalZoom
 	BR.teleport_player(self)
+	if get_parent().name == "Marshlands": sprite.flip_h = true
 
 
 func _physics_process(_delta):
@@ -67,7 +68,7 @@ func _end_scene():
 	if is_physics_processing(): return
 	var zoom_tween := create_tween()
 	zoom_tween.tween_property(camera, "zoom", NormalZoom, 1)
-	if BR.has_ally():
+	if $Ally.visible:
 		$AnimationPlayer.play("returning")
 		await $AnimationPlayer.animation_finished
 

@@ -7,8 +7,9 @@ func _ready():
 
 func select():
 	if not picked_up:
-		if BR.inventory_has_room(&"leaf", 3):
-			BR.inventory_change(&"leaf", 3)
+		var item:Item = BR.find_item(&"leaf")
+		if item.has_room(3):
+			item.amount += 3
 			BR.recieve.emit("You picked up 3 toxic leaves.")
 			picked_up = true
 			$Sprite2D.frame = 1

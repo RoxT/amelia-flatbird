@@ -16,10 +16,7 @@ extends Resource
 @export var effects: Array[AnEffect] = []
 const TOP_PATH := "res://Battle/"
 const ActionsPath := "res://Battle/Actions/%s.tres"
-@export var modifers := {}:
-	set(value):
-		print(str(value))
-		modifers = value
+@export var modifers := {}
 
 signal line_item(msg)
 signal new_mod(mod)

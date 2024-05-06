@@ -57,6 +57,8 @@ func dup_by_key(path:String, key:String):
 
 func poll():
 	get_tree().call_group("poll", "poll")
+	call_on_return.call()
+	call_on_return = no_call 
 		
 func change_scene(target:PackedScene, new_pos:=Vector2.ZERO):
 	#print(get_tree().current_scene.name)
@@ -74,8 +76,7 @@ func _return_to_world():
 	get_tree().root.add_child(last_scene)
 	get_tree().root.remove_child(battler)
 	get_tree().current_scene = last_scene
-	call_on_return.call()
-	call_on_return = no_call
+
 	player_creature.clamp_health()
 	if has_ally(): ally_creature.clamp_health()
 	poll.call_deferred()

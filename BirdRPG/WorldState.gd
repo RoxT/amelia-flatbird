@@ -33,7 +33,7 @@ static func load_state():
 			push_error("Config file didn't load.")
 			return {}
 		for key in BR.world_state:
-			BR.set(key, config.get_value("WS", key))
+			BR.set(key, config.get_value("WS", key, ""))
 		
 		var pack_path:String = Pack.PATH + config.get_value(Special, "pack_type") + ".tres"
 		BR.pack_type = load(pack_path) as Pack

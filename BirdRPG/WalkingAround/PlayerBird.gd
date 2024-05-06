@@ -68,7 +68,7 @@ func _end_scene():
 	var zoom_tween := create_tween()
 	zoom_tween.tween_property(camera, "zoom", NormalZoom, 1)
 	if BR.has_ally():
-		$AnimationPlayer.play("return")
+		$AnimationPlayer.play("returning")
 		await $AnimationPlayer.animation_finished
 
 	set_physics_process(true)

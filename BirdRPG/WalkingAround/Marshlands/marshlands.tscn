@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://mx045w7big6e"]
+[gd_scene load_steps=29 format=3 uid="uid://mx045w7big6e"]
 
 [ext_resource type="TileSet" uid="uid://cxcb7wfe3ytfh" path="res://WalkingAround/Tiles/walking_around_tilesets.tres" id="1_7d2yn"]
 [ext_resource type="PackedScene" uid="uid://bdic3br0kyrud" path="res://WalkingAround/door.tscn" id="2_25urm"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://ik4jcpjgmrun" path="res://WalkingAround/Marshlands/people/beaver.png" id="13_4le2c"]
 [ext_resource type="Texture2D" uid="uid://4cxb2h7khh4g" path="res://WalkingAround/Marshlands/people/frog.png" id="13_xgxfy"]
 [ext_resource type="PackedScene" uid="uid://qq5i815uqjck" path="res://WalkingAround/Marshlands/tree.tscn" id="14_kamdd"]
+[ext_resource type="Script" path="res://WalkingAround/OldFrog.gd" id="14_t8ggb"]
 [ext_resource type="Script" path="res://WalkingAround/Marshlands/SomeBerries.gd" id="15_bjhtg"]
 [ext_resource type="Texture2D" uid="uid://dklhevccxajd0" path="res://WalkingAround/objects/barrel.png" id="16_erc53"]
 [ext_resource type="Texture2D" uid="uid://lwst0d2g00vs" path="res://WalkingAround/objects/just_berries.png" id="17_yh0yy"]
@@ -107,9 +108,10 @@ script = ExtResource("4_1xg3q")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Salamander4"]
-position = Vector2(-8, 32)
+position = Vector2(144, -96)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_j8kgn")
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Salamander4"]
 position = Vector2(0, -116)
@@ -139,12 +141,13 @@ texture = ExtResource("13_xgxfy")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="People/Frog"]
 shape = SubResource("CircleShape2D_ht0n2")
 
-[node name="OldFrog" parent="People" instance=ExtResource("12_15vqu")]
-position = Vector2(2928, 1896)
+[node name="OldFrog2" parent="People" instance=ExtResource("12_15vqu")]
+position = Vector2(3064, 1872)
+script = ExtResource("14_t8ggb")
 messages = Array[String](["Guard: It's Flat Bird the Knight! I'm so glad you're here. Those monsterous Salamanders are still living on the Beavers' lakes. Get rid of them please!", "Flat Bird: Indeed! I brought someone who can help. ", "Flat Bird: Amelia, the Giant Salamanders are powerful but each in one way only. If we can figure out if a Salamander is has strong attack or defence, you can target that with your performances."])
 is_special_scene = true
 
-[node name="Sprite2D" type="Sprite2D" parent="People/OldFrog"]
+[node name="Sprite2D" type="Sprite2D" parent="People/OldFrog2"]
 texture = ExtResource("13_xgxfy")
 
 [node name="CowardFrog" parent="People" instance=ExtResource("12_15vqu")]
@@ -396,9 +399,6 @@ frame = 18
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FrogGate"]
 position = Vector2(24, -40)
 shape = SubResource("RectangleShape2D_hcssr")
-
-[node name="OldFrog" parent="." instance=ExtResource("12_15vqu")]
-position = Vector2(3048.05, 1850.19)
 
 [connection signal="body_entered" from="Salamander" to="Salamander" method="_on_body_entered"]
 [connection signal="body_exited" from="Salamander" to="Salamander" method="_on_body_exited"]

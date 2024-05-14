@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://jl2arhyr7d5q"]
+[gd_scene load_steps=10 format=3 uid="uid://jl2arhyr7d5q"]
 
 [ext_resource type="TileSet" uid="uid://cxcb7wfe3ytfh" path="res://WalkingAround/Tiles/walking_around_tilesets.tres" id="1_st6qw"]
 [ext_resource type="PackedScene" uid="uid://bdic3br0kyrud" path="res://WalkingAround/door.tscn" id="2_si7g4"]
@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://cv18dlnakh3qx" path="res://WalkingAround/HUD.tscn" id="4_tee7x"]
 [ext_resource type="PackedScene" uid="uid://bs25n5uc44unx" path="res://WalkingAround/MESSAGES.tscn" id="5_ra4jx"]
 [ext_resource type="PackedScene" uid="uid://pvg3uais304c" path="res://WalkingAround/RECIEVE.tscn" id="6_b35j3"]
+[ext_resource type="PackedScene" uid="uid://1iap152msmm4" path="res://WalkingAround/simple_NPC.tscn" id="7_jhv4j"]
+[ext_resource type="Texture2D" uid="uid://bu0flwle0trn" path="res://WalkingAround/creatures/hawk.png" id="9_dtncv"]
+[ext_resource type="PackedScene" uid="uid://br4lbolyi3ocb" path="res://WalkingAround/player_bird.tscn" id="10_ebek4"]
 
 [node name="Road" type="Node2D"]
 
@@ -33,3 +36,14 @@ new_position = Vector2(967, 349)
 [node name="Messages" parent="." instance=ExtResource("5_ra4jx")]
 
 [node name="Recieve" parent="." instance=ExtResource("6_b35j3")]
+
+[node name="Hawk" parent="." instance=ExtResource("7_jhv4j")]
+position = Vector2(-920, 112)
+messages = Array[String](["Grandma Hawk: Hello dearies. Flat Bird, who's this with you?", "Amelia: Afternoon, mistress. You may call me Amelia the Squire.", "Grandma Hawk: Ho ho ho! Such a delightfull young pheasant. And that fanciful preening! You remind me of a tiercel I knew a long time ago. I hope you won't be breaking any hearts.", "Amelia: Only skulls, mistress.", "Grandma Hawk: Ho ho ho! You'll be busy then. You two must be on your way. Take my ??? and get rid of the monsters in the marshlands."])
+is_special_scene = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Hawk"]
+texture = ExtResource("9_dtncv")
+
+[node name="PlayerBird" parent="." instance=ExtResource("10_ebek4")]
+position = Vector2(-48, 56)

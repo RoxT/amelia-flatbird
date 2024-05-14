@@ -7,7 +7,7 @@ var btn_selected
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Bag/Label.text = BR.pack_type.title
+	$Bag/Label.text = BR.pack_type.title.capitalize()
 	BR.set_me_up(self)
 	_on_visibility_changed()
 	

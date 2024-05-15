@@ -27,6 +27,9 @@ func _ready():
 	$BagLayer/Inventory.item_actioned.connect(_on_item_actioned)
 	$BagLayer/Inventory.visibility_changed.connect(_on_inventory_visibility_changed)
 	
+func pass_out():
+	$Sprite.modulate = Color(0.46, 0.46, 0.46)
+	
 func _on_item_actioned(value:AnAction):
 	_on_action_pressed(value, $Bag)
 

@@ -1,7 +1,9 @@
 extends Node
 
 const PATH := "user://state.cfg"
-const Special := &"Special"
+const Special_Section := &"Special"
+const WS_Section := &"WorldState"
+const Items_Section := &"Items"
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -10,11 +12,11 @@ static func save_state():
 	var config := ConfigFile.new()
 	# Store some values.
 	for key in BR.world_state:
-		config.set_value("WS", key, BR.get(key))
-	config.set_value(Special, "pack_type", BR.pack_type.title)
-	config.set_value(Special, "pack_type", BR.pack_type.title)
+		config.set_value(WS_Section, key, BR.get(key))
+	config.set_value(Special_Section, "pack_type", BR.pack_type.title)
+	config.set_value(Special_Section, "pack_type", BR.pack_type.title)
 	for item in BR.inventory:
-		config.set_value("Items", item.singular, item.amount)
+		config.set_value(Items_Section, item.singular, item.amount)
 	# Save it to a file (overwrite if already exists).
 	config.save(PATH)
 	
@@ -33,14 +35,14 @@ static func load_state():
 			push_error("Config file didn't load.")
 			return {}
 		for key in BR.world_state:
-			BR.set(key, config.get_value("WS", key, ""))
+			BR.set(key, config.get_value(WS_Section, key, ""))
 		
-		var pack_path:String = Pack.PATH + config.get_value(Special, "pack_type") + ".tres"
+		var pack_path:String = Pack.PATH + config.get_value(Special_Section, "pack_type") + ".tres"
 		BR.pack_type = load(pack_path) as Pack
-		var keys := config.get_section_keys("Items")
+		var keys := config.get_section_keys(Items_Section)
 		for key in keys:
 			var item := BR.load_and_dupe(Item.PATH, key) as Item
-			item.amount = config.get_value("Items", key) as int
+			item.amount = config.get_value(Items_Section, key) as int
 			BR.inventory.append(item)
 		
 		if OS.is_debug_build() and BR.player_creature != null:

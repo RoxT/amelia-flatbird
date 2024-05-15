@@ -16,7 +16,11 @@ const World := preload("res://WalkingAround/starting_area.tscn")
 @export var snakes_killed := 0
 @export var intro_seen := false
 @export var spoke_to_guard := false
-const world_state := ["mice_killed", "entered_marsh", "snakes_killed", "intro_seen", "spoke_to_guard"]
+@export var blue_1 := false
+@export var red_1 := false
+@export var red_2 := false
+@export var blue_2 := false
+const world_state := ["mice_killed", "entered_marsh", "snakes_killed", "intro_seen", "spoke_to_guard", "blue_1", "red_1", "red_2", "blue_2", ]
 var last_scene:Node
 var battler:Node
 var door_teleport := Vector2.ZERO

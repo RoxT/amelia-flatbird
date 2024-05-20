@@ -78,6 +78,7 @@ shape = SubResource("RectangleShape2D_yuorh")
 [node name="Salamander2" type="Area2D" parent="."]
 position = Vector2(1072, 248)
 script = ExtResource("4_1xg3q")
+identifier = "blue_1"
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Salamander2"]
@@ -91,6 +92,7 @@ shape = SubResource("RectangleShape2D_yuorh")
 [node name="Salamander3" type="Area2D" parent="."]
 position = Vector2(1584, 1416)
 script = ExtResource("4_1xg3q")
+identifier = "red_2"
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Salamander3"]
@@ -105,6 +107,7 @@ metadata/_edit_group_ = true
 [node name="Salamander4" type="Area2D" parent="."]
 position = Vector2(2400, 2200)
 script = ExtResource("4_1xg3q")
+identifier = "blue_2"
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Salamander4"]

@@ -1,6 +1,6 @@
 extends "res://WalkingAround/MultilineMessage.gd"
 
-const too_early := "Old Frog: I'm really sorry, but this area is dangerous. If I let you though those Salamanders would eat you for breakfast! You're welcome to hide out here, I know I am."
+const too_early := "Old Frog: I'm sorry, but this area is dangerous. If I let you though those Salamanders would eat you for breakfast! You're welcome to hide out here with me."
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.

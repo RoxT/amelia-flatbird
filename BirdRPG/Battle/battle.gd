@@ -35,14 +35,24 @@ func _on_action_requested(action:AnAction):
 	if action is AHeal:
 		current_creature().hit(action)
 	else:
-		if current_creature() is Player:
+		if not current_creature() is Foe:
 			if foe.hit(action):
 				BR.end_battle()
 				return
 		else:
-			if player.hit(action):
-				BR.end_battle()
-				return
+			var target = player
+			if BR.has_ally():
+				if randf() > 0.5:
+					target = ally
+			if target.hit(action):
+				action_panel.add_history(target.creature.title + " passed out!")
+				target.pass_out()
+				turns.erase(target)
+				if not (player.is_alive() or ally.is_alive()):
+						timer.start()
+						await timer.timeout
+						BR.end_battle()
+						return
 	timer.start()
 	await timer.timeout
 	current = (current+1) % turns.size() 
@@ -52,8 +62,12 @@ func _on_line_item(msg:String):
 	action_panel.add_history(msg)
 
 func start_turn():
-	for i in range(turns.size()):
-		if i == current:
-			turns[i].my_turn()
-		else:
-			turns[i].not_my_turn()
+	if turns[current].is_alive():
+		for i in range(turns.size()):
+			if i == current:
+				turns[i].my_turn()
+			else:
+				turns[i].not_my_turn()
+	else:
+		current = (current+1) % turns.size() 
+		start_turn()

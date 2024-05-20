@@ -72,3 +72,6 @@ func hit(action:AnAction):
 	var lost = creature.hit(action)
 	refresh()
 	return lost
+
+func is_alive()->bool:
+	return creature.health > 0

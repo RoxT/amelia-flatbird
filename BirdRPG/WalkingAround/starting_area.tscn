@@ -100,12 +100,13 @@ hframes = 2
 
 [node name="Door" parent="Objects" instance=ExtResource("12_c4xpf")]
 position = Vector2(960, 224)
-path_to_go = "res://WalkingAround/Marshlands/marshlands.tscn"
-new_position = Vector2(3770, 1536)
+path_to_go = "res://WalkingAround/Road/road.tscn"
+new_position = Vector2(967, 349)
 
 [node name="Gate" type="StaticBody2D" parent="Objects" groups=["poll"]]
 position = Vector2(912, 264)
 script = ExtResource("14_66er6")
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Objects/Gate"]
 position = Vector2(16, 24)

@@ -11,9 +11,9 @@ const PATH := "res://Inventory/things/"
 
 func display_name()->String:
 	if amount == 1:
-		return singular.capitalize()
+		return BR.humanize(singular)
 	else:
-		return plural.capitalize()
+		return BR.humanize(plural)
 
 func change(change_amount:=1)->int:
 	amount = min(BR.max_stack(), amount + change_amount)

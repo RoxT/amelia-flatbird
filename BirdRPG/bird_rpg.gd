@@ -113,3 +113,6 @@ func find_player_node()->Node:
 
 func no_call():
 	pass
+	
+func humanize(value:String)->String:
+	return value.replace("_", " ")

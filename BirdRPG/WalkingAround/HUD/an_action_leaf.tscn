@@ -6,25 +6,29 @@
 offset_left = 21.0
 offset_top = 598.0
 offset_right = 502.0
-offset_bottom = 734.0
+offset_bottom = 743.0
 script = ExtResource("1_1cj6n")
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 2
-offset_right = 481.0
-offset_bottom = 42.0
+offset_left = 18.0
+offset_top = 11.0
+offset_right = 468.0
+offset_bottom = 53.0
 text = "Sing"
 
 [node name="Label1" type="Label" parent="."]
 layout_mode = 2
-offset_top = 42.0
-offset_right = 481.0
-offset_bottom = 84.0
+offset_left = 18.0
+offset_top = 53.0
+offset_right = 468.0
+offset_bottom = 95.0
 text = "Mod: Attack"
 
 [node name="Label2" type="Label" parent="."]
 layout_mode = 2
-offset_top = 84.0
-offset_right = 481.0
-offset_bottom = 126.0
+offset_left = 18.0
+offset_top = 95.0
+offset_right = 461.0
+offset_bottom = 137.0
 text = "Rate: -40"

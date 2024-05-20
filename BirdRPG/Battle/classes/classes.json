@@ -7,7 +7,6 @@
 		"base_attack" : 3,
 		"base_defence" : 20,
 		"base_speed" : 60,
-		"base_hit_chance" : 100,
 		"base_evasion" : 0,
 		"attacks": 
 		["peck"],
@@ -24,7 +23,6 @@
 		"base_attack" : 3,
 		"base_defence" : 10,
 		"base_speed" : 60,
-		"base_hit_chance" : 100,
 		"base_evasion" : 10,
 		"attacks": 
 		["peck",
@@ -41,7 +39,6 @@
 		"base_attack" : 3,
 		"base_defence" : 30,
 		"base_speed" : 60,
-		"base_hit_chance" : 100,
 		"base_evasion" : 0,
 		"attacks": 
 		["peck",

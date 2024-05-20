@@ -10,15 +10,17 @@ func leaf(new_data:Player):
 	else:
 		show()
 	data = new_data
-	var who := "Player" if BR.player_creature == data else "Ally"
-	$NameTitle.text = "%s (%s)" % [data.title, who]
-	$Label.text = "Health: %s/%s" % [data.health, data.max_health]
+	if BR.player_creature == data:
+		$NameTitle.text = "%s the %s (%s)" % ["Amelia", data.title, "player"]
+	else:
+		$NameTitle.text = "%s the %s (%s)" % ["Flat Bird", data.title, "ally"]
+	$Label.text = "%s / %s health" % [data.health, data.max_health]
 	$Bar.max_value = data.max_health
 	$Bar.value = data.health
+	$Portrait.texture = data.load_image()
 	do_label("attack")
 	do_label("defence")
 	do_label("speed")
-	do_label("hit_chance")
 	do_label("evasion")
 	var i = 1
 	for action in data.attacks:
@@ -31,4 +33,4 @@ func leaf(new_data:Player):
 func do_label(prop:String):
 	prop = "base_" + prop
 	var label := get_node(prop.capitalize().replace(" ", ""))
-	label.text = "%s: %s" % [prop.capitalize(), data[prop]]
+	label.text = "%-3d %s" % [data[prop], BR.humanize(prop)]

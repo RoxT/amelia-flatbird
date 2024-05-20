@@ -6,32 +6,34 @@
 
 [node name="HUD" type="CanvasLayer"]
 process_mode = 3
-visible = false
 script = ExtResource("1_dajmv")
 
 [node name="Bag" type="Panel" parent="."]
-offset_left = 29.0
-offset_top = 48.0
-offset_right = 261.0
-offset_bottom = 330.0
+self_modulate = Color(1, 1, 1, 0.878431)
+offset_left = 24.0
+offset_top = 56.0
+offset_right = 256.0
+offset_bottom = 338.0
 
 [node name="Inventory" type="Sprite2D" parent="Bag"]
 show_behind_parent = true
-position = Vector2(275, 402)
+position = Vector2(299, 392)
 texture = ExtResource("2_hwr57")
 
 [node name="Label" type="Label" parent="Bag"]
 layout_mode = 1
-offset_right = 79.0
-offset_bottom = 42.0
+offset_left = 11.0
+offset_top = 10.0
+offset_right = 90.0
+offset_bottom = 52.0
 text = "BAG"
 
 [node name="EmptyLabel" type="Label" parent="Bag"]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 42.0
-offset_right = 227.0
-offset_bottom = 275.0
+offset_left = 11.0
+offset_top = 48.0
+offset_right = 219.0
+offset_bottom = 264.0
 text = "Empty"
 autowrap_mode = 2
 
@@ -40,10 +42,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 6.0
-offset_top = 48.0
-offset_right = -5.0
-offset_bottom = -7.0
+offset_left = 11.0
+offset_top = 51.0
+offset_right = -13.0
+offset_bottom = -18.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -81,16 +83,16 @@ grow_horizontal = 0
 text = "SAVE"
 
 [node name="PlayerLeaf" parent="." instance=ExtResource("3_cc5te")]
-offset_left = 656.0
-offset_top = 40.0
-offset_right = 1184.0
-offset_bottom = 928.0
+offset_left = 672.0
+offset_top = 32.0
+offset_right = 1219.0
+offset_bottom = 916.0
 
 [node name="AllyLeaf" parent="." instance=ExtResource("3_cc5te")]
-offset_left = 1222.0
-offset_top = 48.0
-offset_right = 1804.0
-offset_bottom = 936.0
+offset_left = 1248.0
+offset_top = 32.0
+offset_right = 1795.0
+offset_bottom = 916.0
 
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="pressed" from="Bag/itemLeaf/Use" to="." method="_on_use_pressed"]

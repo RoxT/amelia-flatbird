@@ -7,9 +7,9 @@ var btn_selected
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Bag/Label.text = BR.pack_type.title
+	$Bag/Label.text = BR.pack_type.title.capitalize()
 	BR.set_me_up(self)
-	_on_visibility_changed()
+	hide()
 	
 func _unhandled_key_input(event:InputEvent):
 	if event.is_action_pressed("hud"):
@@ -58,7 +58,7 @@ func _on_button_pressed(btn:Button, thing:Item):
 			$Bag/itemLeaf/Use.disabled = true
 	
 func btn_text(btn:Button, item:Item):
-	btn.text = "%s: %s" % [item.plural, item.amount]
+	btn.text = "%-3d %s" % [item.amount, item.display_name()]
 		
 func _on_use_pressed():
 	item_selected = item_selected as Item

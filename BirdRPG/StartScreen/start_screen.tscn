@@ -1,0 +1,216 @@
+[gd_scene load_steps=8 format=3 uid="uid://dvj3i6b4pbq7u"]
+
+[ext_resource type="Texture2D" uid="uid://bd51iqi8uyrja" path="res://creatures/FS-5814_07_screen.jpg" id="1_nek0r"]
+[ext_resource type="Script" path="res://StartScreen/start_screen.gd" id="1_xsuvj"]
+[ext_resource type="Texture2D" uid="uid://xi7sbyg3gck2" path="res://backgrounds/CHSDM-1971-58-12MattFlynn_screen.jpg" id="2_w7pog"]
+[ext_resource type="Script" path="res://StartScreen/NewGame.gd" id="3_v30ym"]
+
+[sub_resource type="Animation" id="Animation_skst7"]
+resource_name = "play"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5.9),
+"transitions": PackedFloat32Array(1, 27.8576),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(7, 7)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 0.105112),
+"update": 0,
+"values": [Vector2(961, 543), Vector2(600, 485)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 4.5, 5.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_x7t1y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(961, 543)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pe0kr"]
+_data = {
+"RESET": SubResource("Animation_x7t1y"),
+"play": SubResource("Animation_skst7")
+}
+
+[node name="StartScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xsuvj")
+
+[node name="Fs-581407Screen" type="Sprite2D" parent="."]
+texture = ExtResource("1_nek0r")
+centered = false
+
+[node name="Chsdm-1971-58-12MattFlynnScreen" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -16.0
+offset_top = 896.0
+offset_right = 1937.0
+offset_bottom = 2096.0
+texture = ExtResource("2_w7pog")
+stretch_mode = 1
+
+[node name="Container" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -720.0
+offset_bottom = 1080.0
+grow_horizontal = 0
+
+[node name="Title" type="Label" parent="Container"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 237.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 70
+text = "Bird RPG"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Play" type="Button" parent="Container"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -696.0
+offset_top = 237.0
+offset_right = -24.0
+offset_bottom = 316.0
+grow_horizontal = 0
+text = "Play"
+
+[node name="NewGame" type="Button" parent="Container"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -696.0
+offset_top = 344.0
+offset_right = -24.0
+offset_bottom = 423.0
+grow_horizontal = 0
+text = "New Game"
+script = ExtResource("3_v30ym")
+
+[node name="Label" type="Label" parent="Container/NewGame"]
+visible = false
+layout_mode = 0
+offset_top = 252.0
+offset_right = 672.0
+offset_bottom = 330.0
+text = "Are you sure? All progress wil be erased."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="YesNewGame" type="Button" parent="Container/NewGame"]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -672.0
+offset_top = 326.0
+offset_bottom = 405.0
+grow_horizontal = 0
+text = "Yes, new game"
+
+[node name="Nevermind" type="Button" parent="Container/NewGame"]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -672.0
+offset_top = 426.0
+offset_bottom = 505.0
+grow_horizontal = 0
+text = "Nevermind"
+
+[node name="Quit" type="Button" parent="Container"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -696.0
+offset_top = 456.0
+offset_right = -24.0
+offset_bottom = 535.0
+grow_horizontal = 0
+text = "Quit"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_pe0kr")
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(961, 543)
+
+[connection signal="pressed" from="Container/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Container/NewGame" to="Container/NewGame" method="_on_pressed"]
+[connection signal="pressed" from="Container/NewGame/Nevermind" to="Container/NewGame" method="_on_nevermind_pressed"]

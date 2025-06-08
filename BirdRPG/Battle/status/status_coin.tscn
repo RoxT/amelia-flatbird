@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://bguu4v8d0xp64"]
 
 [ext_resource type="Texture2D" uid="uid://xjsl07ke34ff" path="res://Battle/status/up_arrow-export.png" id="1_mpcc6"]
-[ext_resource type="Script" path="res://Battle/status/status_coin.gd" id="2_vn6si"]
-[ext_resource type="Script" path="res://Battle/status/StatusR.gd" id="3_hgs3k"]
+[ext_resource type="Script" uid="uid://bp1egjnqtfd7n" path="res://Battle/status/status_coin.gd" id="2_vn6si"]
+[ext_resource type="Script" uid="uid://pirha1lp5w2n" path="res://Battle/status/StatusR.gd" id="3_hgs3k"]
 [ext_resource type="Texture2D" uid="uid://ftymar0okl3d" path="res://Battle/status/attack-export.png" id="4_8o48e"]
 
 [sub_resource type="Resource" id="Resource_ag2we"]
@@ -81,8 +81,8 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tfxgy"]
 _data = {
-"RESET": SubResource("Animation_5ir0a"),
-"drop": SubResource("Animation_tsckq")
+&"RESET": SubResource("Animation_5ir0a"),
+&"drop": SubResource("Animation_tsckq")
 }
 
 [node name="Arrow" type="TextureRect"]

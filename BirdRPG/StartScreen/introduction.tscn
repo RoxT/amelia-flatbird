@@ -1,7 +1,34 @@
 [gd_scene load_steps=6 format=3 uid="uid://d27di3vqux2fg"]
 
 [ext_resource type="Texture2D" uid="uid://dvu2pgwbi64e7" path="res://backgrounds/SAAM-1929.6.37_1_screen.jpg" id="1_qtrk7"]
-[ext_resource type="Script" path="res://StartScreen/IntroText.gd" id="2_v7ft7"]
+[ext_resource type="Script" uid="uid://cugjetqhl4xw1" path="res://StartScreen/IntroText.gd" id="2_v7ft7"]
+
+[sub_resource type="Animation" id="Animation_4yawj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Saam-1929_6_371Screen:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("IntroText:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_0n3da"]
 resource_name = "play"
@@ -31,37 +58,10 @@ tracks/1/keys = {
 "values": [false, true]
 }
 
-[sub_resource type="Animation" id="Animation_4yawj"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Saam-1929_6_371Screen:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("IntroText:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_46k1d"]
 _data = {
-"RESET": SubResource("Animation_4yawj"),
-"play": SubResource("Animation_0n3da")
+&"RESET": SubResource("Animation_4yawj"),
+&"play": SubResource("Animation_0n3da")
 }
 
 [node name="Introduction" type="Control"]

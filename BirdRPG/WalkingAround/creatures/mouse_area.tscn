@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://q2xupjmg8ot3"]
 
-[ext_resource type="Script" path="res://WalkingAround/creatures/MouseArea.gd" id="1_vau1x"]
+[ext_resource type="Script" uid="uid://cj72jmj2cehan" path="res://WalkingAround/creatures/MouseArea.gd" id="1_vau1x"]
 [ext_resource type="Texture2D" uid="uid://cm5ewe8hcf725" path="res://WalkingAround/creatures/mouse.png" id="2_uuho3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gm1m5"]

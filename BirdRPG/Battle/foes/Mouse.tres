@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="Foe" load_steps=5 format=3 uid="uid://cumxaqfkn767k"]
+[gd_resource type="Resource" script_class="Foe" load_steps=7 format=3 uid="uid://cumxaqfkn767k"]
 
 [ext_resource type="Resource" uid="uid://6hu4l0g32cwq" path="res://Battle/Actions/scratch.tres" id="1_2jk4q"]
-[ext_resource type="Script" path="res://Battle/foes/FoeR.gd" id="1_d622n"]
+[ext_resource type="Script" uid="uid://b06r2r065ttkr" path="res://Battle/foes/FoeR.gd" id="1_d622n"]
+[ext_resource type="Script" uid="uid://bauovou0gu6fp" path="res://Battle/Actions/AnAttackR.gd" id="1_uxjfu"]
 [ext_resource type="Resource" uid="uid://o1xnkfy7w41l" path="res://Battle/Actions/kick.tres" id="2_g5dqf"]
 [ext_resource type="Resource" uid="uid://bkt8j8cxe3jwq" path="res://Battle/Actions/spook.tres" id="3_u12jh"]
+[ext_resource type="Script" uid="uid://572ompjnhcc" path="res://Battle/Actions/AnEffectR.gd" id="4_y1eqp"]
 
 [resource]
 script = ExtResource("1_d622n")
@@ -16,6 +18,6 @@ base_hit_chance = 100
 base_evasion = 0
 title = "Mouse"
 image = "mouse.png"
-attacks = Array[Resource("res://Battle/Actions/AnAttackR.gd")]([ExtResource("1_2jk4q"), ExtResource("2_g5dqf")])
-effects = Array[Resource("res://Battle/Actions/AnEffectR.gd")]([ExtResource("3_u12jh")])
+attacks = Array[ExtResource("1_uxjfu")]([ExtResource("1_2jk4q"), ExtResource("2_g5dqf")])
+effects = Array[ExtResource("4_y1eqp")]([ExtResource("3_u12jh")])
 modifers = {}

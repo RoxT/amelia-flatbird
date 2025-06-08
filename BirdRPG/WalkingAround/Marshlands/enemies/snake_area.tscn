@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://br8pvyhx1x2fr"]
 
-[ext_resource type="Script" path="res://WalkingAround/Marshlands/SnakeArea.gd" id="1_cu23l"]
+[ext_resource type="Script" uid="uid://26pxhs8y60q" path="res://WalkingAround/Marshlands/SnakeArea.gd" id="1_cu23l"]
 [ext_resource type="Texture2D" uid="uid://dre3443q0xbey" path="res://WalkingAround/creatures/snake.png" id="2_7k3i8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0u8bd"]

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="AHeal" load_steps=2 format=3 uid="uid://bc786ov34fshp"]
 
-[ext_resource type="Script" path="res://Battle/Actions/AHeal.gd" id="1_1daq7"]
+[ext_resource type="Script" uid="uid://dkcgyv8jjvj6f" path="res://Battle/Actions/AHeal.gd" id="1_1daq7"]
 
 [resource]
 script = ExtResource("1_1daq7")

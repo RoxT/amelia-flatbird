@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b2ua5vo28t6na"]
 
-[ext_resource type="Script" path="res://bird_rpg.gd" id="1_xd7ba"]
+[ext_resource type="Script" uid="uid://bytq0lh34oqit" path="res://bird_rpg.gd" id="1_xd7ba"]
 
 [node name="BirdRPG" type="Node"]
 script = ExtResource("1_xd7ba")

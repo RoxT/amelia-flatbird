@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bl8yusowwfwvy"]
 
-[ext_resource type="Script" path="res://WalkingAround/WorldAnimations.gd" id="1_bwpcw"]
+[ext_resource type="Script" uid="uid://dwkrtcsytgr65" path="res://WalkingAround/WorldAnimations.gd" id="1_bwpcw"]
 
 [sub_resource type="Animation" id="Animation_aen7m"]
 length = 0.001
@@ -50,9 +50,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_utiyf"]
 _data = {
-"RESET": SubResource("Animation_aen7m"),
-"fade_in": SubResource("Animation_ibich"),
-"fade_out": SubResource("Animation_7ig31")
+&"RESET": SubResource("Animation_aen7m"),
+&"fade_in": SubResource("Animation_ibich"),
+&"fade_out": SubResource("Animation_7ig31")
 }
 
 [node name="WorldAnimations" type="AnimationPlayer"]

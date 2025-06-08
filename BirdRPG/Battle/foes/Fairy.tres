@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="Foe" load_steps=5 format=3 uid="uid://cpajltvliivcf"]
+[gd_resource type="Resource" script_class="Foe" load_steps=7 format=3 uid="uid://cpajltvliivcf"]
 
+[ext_resource type="Script" uid="uid://bauovou0gu6fp" path="res://Battle/Actions/AnAttackR.gd" id="1_1bw2r"]
 [ext_resource type="Resource" uid="uid://o1xnkfy7w41l" path="res://Battle/Actions/kick.tres" id="1_11he8"]
-[ext_resource type="Script" path="res://Battle/foes/FoeR.gd" id="1_n070h"]
+[ext_resource type="Script" uid="uid://b06r2r065ttkr" path="res://Battle/foes/FoeR.gd" id="1_n070h"]
 [ext_resource type="Resource" uid="uid://dxb6n05d54wjc" path="res://Battle/Actions/sing.tres" id="2_5qylq"]
 [ext_resource type="Resource" uid="uid://bkt8j8cxe3jwq" path="res://Battle/Actions/spook.tres" id="3_32b1p"]
+[ext_resource type="Script" uid="uid://572ompjnhcc" path="res://Battle/Actions/AnEffectR.gd" id="3_cq3na"]
 
 [resource]
 script = ExtResource("1_n070h")
@@ -16,6 +18,6 @@ base_hit_chance = 100
 base_evasion = 0
 title = "Fairy"
 image = "bird.png"
-attacks = Array[Resource("res://Battle/Actions/AnAttackR.gd")]([ExtResource("1_11he8")])
-effects = Array[Resource("res://Battle/Actions/AnEffectR.gd")]([ExtResource("2_5qylq"), ExtResource("3_32b1p")])
+attacks = Array[ExtResource("1_1bw2r")]([ExtResource("1_11he8")])
+effects = Array[ExtResource("3_cq3na")]([ExtResource("2_5qylq"), ExtResource("3_32b1p")])
 modifers = {}

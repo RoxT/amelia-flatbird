@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bs25n5uc44unx"]
 
-[ext_resource type="Script" path="res://WalkingAround/Messages.gd" id="1_lgjwf"]
+[ext_resource type="Script" uid="uid://c4a5uluq4myug" path="res://WalkingAround/Messages.gd" id="1_lgjwf"]
 
 [node name="Messages" type="CanvasLayer"]
 process_mode = 2

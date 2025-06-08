@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dj4o2w0u5vtb6"]
 
-[ext_resource type="Script" path="res://Players/CreatureLeaf.gd" id="1_xliub"]
-[ext_resource type="Resource" uid="uid://dij4cjqimdual" path="res://Battle/classes/Pheasant.tres" id="2_afdyn"]
+[ext_resource type="Script" uid="uid://cy4ghxehyh427" path="res://Players/CreatureLeaf.gd" id="1_xliub"]
+[ext_resource type="Resource" uid="uid://b2ppgd3cxosy6" path="res://Battle/classes/Pheasant.tres" id="2_afdyn"]
 
 [node name="CreatureLeaf" type="VFlowContainer"]
 anchors_preset = 15

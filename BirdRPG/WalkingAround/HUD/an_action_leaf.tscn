@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://citr7hpyxlrea"]
 
-[ext_resource type="Script" path="res://WalkingAround/HUD/an_action_leaf.gd" id="1_1cj6n"]
+[ext_resource type="Script" uid="uid://jdaf8e2hqbb0" path="res://WalkingAround/HUD/an_action_leaf.gd" id="1_1cj6n"]
 
 [node name="ActionLeaf" type="Panel"]
 offset_left = 21.0

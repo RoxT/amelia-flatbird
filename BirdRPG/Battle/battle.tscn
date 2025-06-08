@@ -1,16 +1,16 @@
 [gd_scene load_steps=13 format=3 uid="uid://c1qqhv44ruqcg"]
 
-[ext_resource type="Script" path="res://Battle/battle.gd" id="1_1o26n"]
-[ext_resource type="Script" path="res://Battle/ActionPanel.gd" id="2_b6uhu"]
-[ext_resource type="Script" path="res://Battle/foes/Foe.gd" id="2_inowl"]
+[ext_resource type="Script" uid="uid://b51geq4x18c82" path="res://Battle/battle.gd" id="1_1o26n"]
+[ext_resource type="Script" uid="uid://5wdehdtn04eb" path="res://Battle/ActionPanel.gd" id="2_b6uhu"]
+[ext_resource type="Script" uid="uid://bbrgb8fj0ivoo" path="res://Battle/foes/Foe.gd" id="2_inowl"]
 [ext_resource type="Texture2D" uid="uid://dw5x845qxfbwo" path="res://Battle/classes/bird.png" id="2_tyggp"]
 [ext_resource type="Texture2D" uid="uid://cpdrgsuxwybw7" path="res://Battle/classes/flat_bird.png" id="3_q2ylu"]
 [ext_resource type="Resource" uid="uid://it0i4x1qh1fi" path="res://Battle/foes/SalamandersBlue.tres" id="4_ygxkv"]
 [ext_resource type="Texture2D" uid="uid://lsm5pvkx5j0u" path="res://Battle/foes/salamanders.jpg" id="5_3386g"]
 [ext_resource type="Texture2D" uid="uid://dbplj6dmfdkbo" path="res://Battle/classes/flat_bird_.png" id="6_j241i"]
-[ext_resource type="Script" path="res://Battle/classes/Player.gd" id="6_kerbk"]
+[ext_resource type="Script" uid="uid://di57pydm6rixw" path="res://Battle/classes/Player.gd" id="6_kerbk"]
 [ext_resource type="Texture2D" uid="uid://dw7qv0v20dnto" path="res://Battle/classes/bird_.png" id="11_a4poq"]
-[ext_resource type="Script" path="res://Battle/Bag.gd" id="12_hfl61"]
+[ext_resource type="Script" uid="uid://byaliypektv0u" path="res://Battle/Bag.gd" id="12_hfl61"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gwmsd"]
 bg_color = Color(0.168627, 0.156863, 0.254902, 0.388235)

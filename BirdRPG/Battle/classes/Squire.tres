@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="Player" load_steps=5 format=3]
+[gd_resource type="Resource" script_class="Player" load_steps=7 format=3 uid="uid://esqbtifsek3e"]
 
-[ext_resource type="Resource" path="res://Battle/Actions/peck.tres" id="1_qfh4m"]
-[ext_resource type="Resource" path="res://Battle/Actions/spook.tres" id="2_mu68e"]
-[ext_resource type="Resource" path="res://Battle/Actions/sing.tres" id="3_2hmjv"]
-[ext_resource type="Script" path="res://Battle/classes/PlayerR.gd" id="4_iflwy"]
+[ext_resource type="Script" uid="uid://bauovou0gu6fp" path="res://Battle/Actions/AnAttackR.gd" id="1_n2t51"]
+[ext_resource type="Resource" uid="uid://bm5qwapquc4re" path="res://Battle/Actions/peck.tres" id="1_qfh4m"]
+[ext_resource type="Resource" uid="uid://bkt8j8cxe3jwq" path="res://Battle/Actions/spook.tres" id="2_mu68e"]
+[ext_resource type="Resource" uid="uid://dxb6n05d54wjc" path="res://Battle/Actions/sing.tres" id="3_2hmjv"]
+[ext_resource type="Script" uid="uid://572ompjnhcc" path="res://Battle/Actions/AnEffectR.gd" id="3_s7eg4"]
+[ext_resource type="Script" uid="uid://c0gaih0qiuup" path="res://Battle/classes/PlayerR.gd" id="4_iflwy"]
 
 [resource]
 script = ExtResource("4_iflwy")
@@ -16,6 +18,6 @@ base_hit_chance = 100
 base_evasion = 0
 title = "Squire"
 image = "bird"
-attacks = Array[Resource("res://Battle/Actions/AnAttackR.gd")]([ExtResource("1_qfh4m")])
-effects = Array[Resource("res://Battle/Actions/AnEffectR.gd")]([ExtResource("2_mu68e"), ExtResource("3_2hmjv")])
+attacks = Array[ExtResource("1_n2t51")]([ExtResource("1_qfh4m")])
+effects = Array[ExtResource("3_s7eg4")]([ExtResource("2_mu68e"), ExtResource("3_2hmjv")])
 modifers = {}

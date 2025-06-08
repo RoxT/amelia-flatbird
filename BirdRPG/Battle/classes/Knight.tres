@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="Player" load_steps=5 format=3 uid="uid://cshwybxxrlawp"]
+[gd_resource type="Resource" script_class="Player" load_steps=7 format=3 uid="uid://cshwybxxrlawp"]
 
+[ext_resource type="Script" uid="uid://bauovou0gu6fp" path="res://Battle/Actions/AnAttackR.gd" id="1_l34iv"]
 [ext_resource type="Resource" uid="uid://bm5qwapquc4re" path="res://Battle/Actions/peck.tres" id="1_uo14g"]
 [ext_resource type="Resource" uid="uid://o1xnkfy7w41l" path="res://Battle/Actions/kick.tres" id="2_x8h70"]
 [ext_resource type="Resource" uid="uid://cgqdcv6lt72fn" path="res://Battle/Actions/flair.tres" id="3_6q3ku"]
-[ext_resource type="Script" path="res://Battle/classes/PlayerR.gd" id="4_a4yxy"]
+[ext_resource type="Script" uid="uid://c0gaih0qiuup" path="res://Battle/classes/PlayerR.gd" id="4_a4yxy"]
+[ext_resource type="Script" uid="uid://572ompjnhcc" path="res://Battle/Actions/AnEffectR.gd" id="4_yy5pv"]
 
 [resource]
 script = ExtResource("4_a4yxy")
@@ -16,6 +18,6 @@ base_hit_chance = 100
 base_evasion = 0
 title = "Knight"
 image = "flat_bird"
-attacks = Array[Resource("res://Battle/Actions/AnAttackR.gd")]([ExtResource("1_uo14g"), ExtResource("2_x8h70")])
-effects = Array[Resource("res://Battle/Actions/AnEffectR.gd")]([ExtResource("3_6q3ku")])
+attacks = Array[ExtResource("1_l34iv")]([ExtResource("1_uo14g"), ExtResource("2_x8h70")])
+effects = Array[ExtResource("4_yy5pv")]([ExtResource("3_6q3ku")])
 modifers = {}

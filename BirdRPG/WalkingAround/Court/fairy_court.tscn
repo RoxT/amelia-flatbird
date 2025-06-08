@@ -85,8 +85,8 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pr6vb"]
 _data = {
-"RESET": SubResource("Animation_ualau"),
-"goodbye": SubResource("Animation_lpavn")
+&"RESET": SubResource("Animation_ualau"),
+&"goodbye": SubResource("Animation_lpavn")
 }
 
 [sub_resource type="Animation" id="Animation_sx0ye"]
@@ -194,8 +194,8 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cn2b3"]
 _data = {
-"RESET": SubResource("Animation_sx0ye"),
-"goodbye": SubResource("Animation_0h21w")
+&"RESET": SubResource("Animation_sx0ye"),
+&"goodbye": SubResource("Animation_0h21w")
 }
 
 [node name="FairyCourt" type="Node2D"]

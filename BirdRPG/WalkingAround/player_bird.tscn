@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://br4lbolyi3ocb"]
 
-[ext_resource type="Script" path="res://WalkingAround/PlayerBird.gd" id="1_7uog1"]
+[ext_resource type="Script" uid="uid://cctgq6n5m2w4q" path="res://WalkingAround/PlayerBird.gd" id="1_7uog1"]
 [ext_resource type="SpriteFrames" uid="uid://3umme616cwrw" path="res://WalkingAround/player_bird_spriteframes.tres" id="2_vo268"]
 [ext_resource type="AudioStream" uid="uid://da6j06u1wykjy" path="res://WalkingAround/Events/RunningWater.WAV" id="3_q8srd"]
 [ext_resource type="AudioStream" uid="uid://dgq1wa4euqm56" path="res://Sounds/rain to birds.ogg" id="4_2fy7v"]
@@ -233,10 +233,10 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_l41ip"]
 _data = {
-"RESET": SubResource("Animation_bw27w"),
-"intro": SubResource("Animation_87caw"),
-"listening": SubResource("Animation_b05qd"),
-"returning": SubResource("Animation_jh26d")
+&"RESET": SubResource("Animation_bw27w"),
+&"intro": SubResource("Animation_87caw"),
+&"listening": SubResource("Animation_b05qd"),
+&"returning": SubResource("Animation_jh26d")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gdpdr"]
@@ -258,7 +258,7 @@ shape = SubResource("CapsuleShape2D_v77xr")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_l41ip")
+&"": SubResource("AnimationLibrary_l41ip")
 }
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

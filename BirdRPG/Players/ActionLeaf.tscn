@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b7vkrfkn5mp1v"]
 
-[ext_resource type="Script" path="res://Players/ActionLeaf.gd" id="1_84732"]
+[ext_resource type="Script" uid="uid://b4b0uqllaobyj" path="res://Players/ActionLeaf.gd" id="1_84732"]
 
 [node name="ActionLeaf" type="VFlowContainer"]
 anchors_preset = 15

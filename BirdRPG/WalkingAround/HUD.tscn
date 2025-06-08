@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cv18dlnakh3qx"]
 
-[ext_resource type="Script" path="res://WalkingAround/HUD.gd" id="1_dajmv"]
+[ext_resource type="Script" uid="uid://dqn70ybinyflk" path="res://WalkingAround/HUD.gd" id="1_dajmv"]
 [ext_resource type="Texture2D" uid="uid://rd0l470d0khb" path="res://backgrounds/inventory.jpg" id="2_hwr57"]
 [ext_resource type="PackedScene" uid="uid://del7fl8cjbhul" path="res://WalkingAround/HUD/player_leaf.tscn" id="3_cc5te"]
 

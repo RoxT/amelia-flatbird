@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="AnEffect" load_steps=2 format=3 uid="uid://cgqdcv6lt72fn"]
 
-[ext_resource type="Script" path="res://Battle/Actions/AnEffectR.gd" id="1_hxvkh"]
+[ext_resource type="Script" uid="uid://572ompjnhcc" path="res://Battle/Actions/AnEffectR.gd" id="1_hxvkh"]
 
 [resource]
 script = ExtResource("1_hxvkh")

@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="Foe" load_steps=5 format=3 uid="uid://coay8y3fb3lqo"]
+[gd_resource type="Resource" script_class="Foe" load_steps=7 format=3 uid="uid://coay8y3fb3lqo"]
 
+[ext_resource type="Script" uid="uid://bauovou0gu6fp" path="res://Battle/Actions/AnAttackR.gd" id="1_qyr7m"]
 [ext_resource type="Resource" uid="uid://o1xnkfy7w41l" path="res://Battle/Actions/kick.tres" id="1_vmvc0"]
 [ext_resource type="Resource" uid="uid://6hu4l0g32cwq" path="res://Battle/Actions/scratch.tres" id="2_u3umf"]
 [ext_resource type="Resource" uid="uid://bbt3ywcp8x5ih" path="res://Battle/Actions/bite.tres" id="3_2nnek"]
-[ext_resource type="Script" path="res://Battle/foes/FoeR.gd" id="4_f4nkk"]
+[ext_resource type="Script" uid="uid://b06r2r065ttkr" path="res://Battle/foes/FoeR.gd" id="4_f4nkk"]
+[ext_resource type="Script" uid="uid://572ompjnhcc" path="res://Battle/Actions/AnEffectR.gd" id="5_002ke"]
 
 [resource]
 script = ExtResource("4_f4nkk")
@@ -16,6 +18,6 @@ base_hit_chance = 100
 base_evasion = 5
 title = "Salamanders Red"
 image = "salamanders.jpg"
-attacks = Array[Resource("res://Battle/Actions/AnAttackR.gd")]([ExtResource("1_vmvc0"), ExtResource("2_u3umf"), ExtResource("3_2nnek")])
-effects = Array[Resource("res://Battle/Actions/AnEffectR.gd")]([])
+attacks = Array[ExtResource("1_qyr7m")]([ExtResource("1_vmvc0"), ExtResource("2_u3umf"), ExtResource("3_2nnek")])
+effects = Array[ExtResource("5_002ke")]([])
 modifers = {}

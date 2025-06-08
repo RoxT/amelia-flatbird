@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://pvg3uais304c"]
 
-[ext_resource type="Script" path="res://WalkingAround/Recieve.gd" id="1_8kgqf"]
+[ext_resource type="Script" uid="uid://bgrqjori8b27j" path="res://WalkingAround/Recieve.gd" id="1_8kgqf"]
 
 [node name="Recieve" type="CanvasLayer"]
 process_mode = 2
